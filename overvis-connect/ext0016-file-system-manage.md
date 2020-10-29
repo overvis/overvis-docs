@@ -37,7 +37,7 @@ Field       | Length (bytes) | Description
 
 ### Errors
 
-Код    | Description
+Code   | Description
 -------|------------
 `0010` | Volume write error.
 `0011` | Invalid (deprecated) identifier.
@@ -72,7 +72,7 @@ Field       | Length (bytes) | Description
 
 ### Errors
 
-Код    | Description
+Code   | Description
 -------|------------
 `0010` | Volume write error.
 `0011` | Invalid (deprecated) identifier.
@@ -106,6 +106,6 @@ Field       | Length (bytes) | Description
 
 ### Errors
 
-Код    | Description
+Code   | Description
 -------|------------
 `0010` | Invalid (deprecated) identifier.

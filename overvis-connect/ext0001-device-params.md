@@ -3,7 +3,7 @@
 * *Extension dependencies:* no
 * *Document status:* `Approved on 2020-02-01`
 
-This extension describes the reading and setting of parameters (setpoints/settings) of the device. Parameters are stored in non-volatile memory. To optimize work with a large number of records and eliminate intermediate states, the extension supports transactional work - changes are first saved in RAM, then, when the transaction is completed, all accumulated changes are written to permanent memory.
+This extension describes the reading and setting of parameters (setpoints/settings) of the device. Parameters are stored in persistent memory. To optimize work with a large number of records and eliminate intermediate states, the extension supports transactional work - changes are first saved in RAM, then, when the transaction is completed, all accumulated changes are written to permanent memory.
 
 
 # Commands (`CMD`)
@@ -11,7 +11,7 @@ This extension describes the reading and setting of parameters (setpoints/settin
 
 ## `0002` Read Parameters
 
-Reading a block of parameters (settings) from non-volatile memory.
+Reading a block of parameters (settings) from persistent memory.
 
 ### Request
 
@@ -50,7 +50,7 @@ Code   | Description
 
 ## `0003` Write Parameters
 
-Writing a block of parameters (settings) and managing the transaction of moving changes to non-volatile memory.
+Writing a block of parameters (settings) and managing the transaction of moving changes to persistent memory.
 
 Correct device response (without error) confirms acceptance of changes and/or writing to ROM (if `TRCON = 2`).
 
