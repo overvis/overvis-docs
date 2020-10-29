@@ -114,7 +114,7 @@ Remove multiple specified events from the device.
 
 ### Fields
 
-Field       | Length (байт) | Description
+Field       | Length (bytes) | Description
 ------------|---------------|------------
 `EVENT`     | regulated     | The byte representation of the event.
 
