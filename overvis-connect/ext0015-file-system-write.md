@@ -1,7 +1,7 @@
 # EXT0015: File System Write
 
 * *Extension dependencies:* no
-* *Document status:* `Draft`
+* *Document status:* `Discussion`
 
 This extension describes how to write data to the device's file system.
 

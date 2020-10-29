@@ -1,7 +1,7 @@
 # EXT0014: File System Navigate
 
 * *Extension dependencies:* no
-* *Document status:* `Draft`
+* *Document status:* `Discussion`
 
 This extension describes navigation in the device's file system.
 
