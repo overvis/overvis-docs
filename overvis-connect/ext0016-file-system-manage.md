@@ -1,7 +1,7 @@
 # EXT0016: File System Manage
 
 * *Extension dependencies:* `0015`
-* *Document status:* `Draft`
+* *Document status:* `Discussion`
 
 This extension describes how to manage the file system of a device.
 

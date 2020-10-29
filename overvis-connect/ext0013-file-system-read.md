@@ -1,7 +1,7 @@
 # EXT0013: File System Read
 
 * *Extension dependencies:* no
-* *Document status:* `Draft`
+* *Document status:* `Discussion`
 
 This extension describes how to read data from the device's file system.
 
