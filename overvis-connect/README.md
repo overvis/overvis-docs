@@ -1,4 +1,4 @@
-# Overvis Connect Protocol
+# Overvis Connect Protocol Version 1
 
 ## Features and extensions directory
 
