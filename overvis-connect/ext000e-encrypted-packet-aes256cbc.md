@@ -1,7 +1,7 @@
 # EXT000E: Encrypted Packet AES 256 CBC
 
 * *Extension dependencies:* no
-* *Document status:* `Discussion`
+* *Document status:* `Testing`
 
 This extension describes the process of transmitting encoded data, with full encryption of requests, responses and errors. The exchange of encryption keys is not considered and should be done through other extensions.
 
