@@ -2,7 +2,7 @@
 
 *Document status:* `approved on 2020-02-01`
 
-Overvis Connect is a minimalistic communication protocol between device and application. The underlying protocol describes connection support and sending meta information. Additional functionality, such as working with device parameters, reading the device journal, working with the device's internal clock, etc., is described in the protocol extensions. The list of extensions supported by the device is transmitted in meta-information (Handshake). Based on the list of supported extensions, the application determines the capabilities of the hardware.
+Overvis Connect is a lightweight communication protocol between device and application. The underlying protocol describes connection support and sending meta information. Additional functionality, such as working with device parameters, reading the device journal, working with the device's internal clock, etc., is described in the protocol extensions. The list of extensions supported by the device is transmitted in meta-information (Handshake). Based on the list of supported extensions, the application determines the capabilities of the hardware.
 
 The basic version of the protocol does not impose any requirements on the device's capabilities, except for the ability to exchange data with the application over any connection.
 

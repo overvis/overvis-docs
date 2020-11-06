@@ -1,5 +1,7 @@
 # Overvis Connect Protocol Version 1
 
+Overvis Connect is a lightweight data transfer protocol designed for embedded devices and industrial controllers.
+
 ## Features and extensions directory
 
 * [Basic protocol](overvis-connect.md) _(approved)_
@@ -43,7 +45,7 @@
 * [`EXT000E` Encrypted Packet AES 256 CBC](ext000e-encrypted-packet-aes256cbc.md) _(testing)_
     * `0018` Send Encrypted Request
 * [`EXT000F` Asynchronous Process Result](ext000f-asynchronous-result.md) _(approved)_
-    * `0019` Get Asynchronous Process Result    
+    * `0019` Get Asynchronous Process Result
 * [`EXT0010` Encrypted Packet Gamma](ext0010-encrypted-packet-gamma.md) _(approved)_
     * `0018` Send Encrypted Request
 * [`EXT0011` EdDSA Authentication](ext0011-eddsa-auth.md) _(discussion)_
