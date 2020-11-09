@@ -1,17 +1,17 @@
 <a name="top"></a>
 # Overvis API v0.1.0 :: Alert API
 
-- [`GET v1/alert/:alertId/` - Get Alert Data](#Get-Alert-Data)
-- [`GET v1/alert/:alertId/status/` - Get Alert Status Information](#Get-Alert-Status-Information)
-- [`GET v1/org/:orgId/alerts/` - Get List of Alerts](#Get-List-of-Alerts)
+- [`GET /alert/:alertId/` - Get Alert Data](#Get-Alert-Data)
+- [`GET /alert/:alertId/status/` - Get Alert Status Information](#Get-Alert-Status-Information)
+- [`GET /org/:orgId/alerts/` - Get List of Alerts](#Get-List-of-Alerts)
 
-## <a name='Get-Alert-Data'></a> `GET v1/alert/:alertId/` - Get Alert Data
+## <a name='Get-Alert-Data'></a> `GET /alert/:alertId/` - Get Alert Data
 [Back to top](#top)
 
 Returns full information about alert structure. Includes list of actions, followUps and conditions.
 
 ```
-GET v1/alert/:alertId/
+GET /alert/:alertId/
 ```
 *Required account permissions:* `demo`
 
@@ -95,13 +95,13 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 ```
 
 
-## <a name='Get-Alert-Status-Information'></a> `GET v1/alert/:alertId/status/` - Get Alert Status Information
+## <a name='Get-Alert-Status-Information'></a> `GET /alert/:alertId/status/` - Get Alert Status Information
 [Back to top](#top)
 
 Returns alert status information, including current state (active or not), system ID of the last record, when it was started, confirmed, and resolved. Also includes information about all condition statuses.
 
 ```
-GET v1/alert/:alertId/status/
+GET /alert/:alertId/status/
 ```
 *Required account permissions:* `demo`
 
@@ -149,13 +149,13 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 ```
 
 
-## <a name='Get-List-of-Alerts'></a> `GET v1/org/:orgId/alerts/` - Get List of Alerts
+## <a name='Get-List-of-Alerts'></a> `GET /org/:orgId/alerts/` - Get List of Alerts
 [Back to top](#top)
 
 Returns an array with basic information about all alerts that belong to the organization. The list contains names and system IDs.
 
 ```
-GET v1/org/:orgId/alerts/
+GET /org/:orgId/alerts/
 ```
 *Required account permissions:* `demo`
 
