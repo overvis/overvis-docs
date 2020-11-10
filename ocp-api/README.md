@@ -69,6 +69,8 @@ All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845
 - [Authentication API](./Authentication_API.md)
   - [`POST /authenticate/` - Login](./Authentication_API.md#Authenticate)
   - [`POST /logout/` - Logout](./Authentication_API.md#Logout)
+- [User API](./User_API.md)
+  - [`GET  /user/orgs/` - List User Organizations Access](./User_API.md#GetUserOrgList)
 - [Organization API](./Organization_API.md)
   - [`GET  /org/:orgId/nets/device-param-tree/` - Get Organization Networks-Devices-Parameters Tree](./Organization_API.md#OrgGetDeviceParamTree)
   - [`POST /org/:orgId/dashboard/add-widgets/` - Add Widgets to Dashboard](./Organization_API.md#DashboardAddWidgets)

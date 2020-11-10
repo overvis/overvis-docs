@@ -37,9 +37,9 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 | `description` | `String` | **optional** Alert description added by user. |
 | `conditionLogic` | `String` | Logic of the alert triggering:<br> - `all` - all conditions should trigger to start the event,<br> - `any` - any of the conditions should trigger to start the event. |
 | `logAs` | `String` | Alert level: `none`, `info`, `warning`, `failure`, `critical`. |
-| `conditions` | `Object[]` | List of alert conditions:<br> - `paramId`: Number, System ID of the parameter.<br> - `kind`: String, Kind of operation. `g` - greater than, `ge` - greater or equal to, `l` - less then, `le` - less or equal to, `eq` - equal to, `neq` - not equal to, `reading-error` - reading error.<br> - `param`: String, parameter "system path" consisting of the parameter id, parameter slug, device slug, and network slug, @ - separator character.<br> - `value`: Number, optional, value for comparison operation. |
-| `actions` | `Object[]` | Alert actions list. Each record contains:<br> - `timeoutMinutes`: Number, the delay for this action.<br> - `type`: String, optional, notification method: `sms`, `email`, `voice-call`.<br> - `recepient`: String, optional, notification recipient. Email or phone number, depending on `type`. |
-| `followUps` | `Object[]` | Alert actions that are performed upon completion of the alert. Each record contains:<br> - `stage`: String, stage of the alert when this followup is performed: `confirmed`, `not-confirmed`, `resolved`.<br> - `timeoutMinutes`: Number, the delay in minutes for this action.<br> - `type`: String, optional, notification method: `sms`, `email`, `voice-call`.<br> - `recepient`: String, optional, notification recipient. Email or phone number, depending on `type`. |
+| `conditions` | `Object` | Dictionary of alert conditions, where key is system ID and value is:<br> - `paramId`: Number, System ID of the parameter.<br> - `kind`: String, Kind of operation. `g` - greater than, `ge` - greater or equal to, `l` - less then, `le` - less or equal to, `eq` - equal to, `neq` - not equal to, `reading-error` - reading error.<br> - `param`: String, parameter "system path" consisting of the parameter id, parameter slug, device slug, and network slug, @ - separator character.<br> - `value`: Number, optional, value for comparison operation. |
+| `actions` | `Object` | Dictionary of alert actions, where key is system ID and value is:<br> - `timeoutMinutes`: Number, the delay for this action.<br> - `type`: String, optional, notification method: `sms`, `email`, `voice-call`.<br> - `recepient`: String, optional, notification recipient. Email or phone number, depending on `type`. |
+| `followUps` | `Object` | Dictionary of alert actions that are performed upon completion of the alert. Key is system ID and value is:<br> - `stage`: String, stage of the alert when this followup is performed: `confirmed`, `not-confirmed`, `resolved`.<br> - `timeoutMinutes`: Number, the delay in minutes for this action.<br> - `type`: String, optional, notification method: `sms`, `email`, `voice-call`.<br> - `recepient`: String, optional, notification recipient. Email or phone number, depending on `type`. |
 
 ### Success response example
 
@@ -51,46 +51,46 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
     "slug": "and-logic-alert",
     "description": "alert description",
     "conditionLogic": "all",
-    "conditions": [
-        {
+    "conditions": {
+        "122": {
             "paramId": 542,
             "kind": "eq",
             "param": "542#coil@example-device-bc@backward-connection-to-emu",
             "value": 1,
         },
-        {
+        "123": {
              "paramId": 543,
             "kind": "eq",
             "param": "543#discrete-input@example-device-bc@backward-connection-to-emu",
             "value": 1,
         },
-    ],
-    "actions": [
-        {
+    },
+    "actions": {
+        "210": {
             "timeoutMinutes": 5,
             "type": "email",
             "recepient": "asdf@overvis.com",
         },
-        {
+        "211": {
             "timeoutMinutes": 0,
             "type": "sms",
             "recepient": "+380330000000",
         }
-    ],
-    "followUps": [
-        {
+    },
+    "followUps": {
+        "212": {
             "stage": "confirmed",
             "timeoutMinutes": 2,
             "type": "email",
             "recepient": "asdf@overvis.com",
         },
-        {
+        "213": {
             "stage": "not-confirmed",
             "timeoutMinutes": 0,
             "type": "sms",
             "recepient": "+380330000000",
         }
-    ],
+    },
 }
 ```
 
