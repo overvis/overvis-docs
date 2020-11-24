@@ -77,7 +77,7 @@ Overvis Connect is a lightweight data transfer protocol designed for embedded de
 # Document statuses
 
 * _Draft_ - the document is not ready for discussion.
-* _Discussion_ - ocument under discussion, pending further edits.
+* _Discussion_ - the document under discussion, pending further edits.
 * _Testing_ - the document is under implementation and testing, edits are possible. Devices with implementation are not available for sale.
 * _Approved_ - the document is ready, no edits are possible. Devices with implementation are now on sale. Approved documents are not deleted, they can only be marked as outdated. When approving a document, it is necessary to mark the date of approval in the meta-header.
 * _Outdated document_ - the document is no longer used, edits are not possible, devices with implementation are released for sale, but new ones are not produced. Outdated documents are not deleted.
