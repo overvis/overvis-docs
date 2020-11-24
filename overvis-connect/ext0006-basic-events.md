@@ -80,9 +80,9 @@ Recording one or more events to the device.
 
 ### Fields
 
-Field    | Legth (bytes) | Description
----------|---------------|------------
-`EVENT`  | regulated     | The byte representation of the event.
+Field    | Length (bytes) | Description
+---------|----------------|------------
+`EVENT`  | regulated      | The byte representation of the event.
 
 Events that are identical to those that already exist in the ROM are ignored when written.
 
@@ -115,8 +115,8 @@ Remove multiple specified events from the device.
 ### Fields
 
 Field       | Length (bytes) | Description
-------------|---------------|------------
-`EVENT`     | regulated     | The byte representation of the event.
+------------|----------------|------------
+`EVENT`     | regulated      | The byte representation of the event.
 
 Events missing in the device are ignored.
 
