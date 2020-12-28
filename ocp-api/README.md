@@ -86,3 +86,6 @@ All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845
   - [`GET  /org/:orgId/alerts/` - Get List of Alerts](./Alert_API.md#GetAlertsList)
   - [`GET  /alert/:alertId/` - Get Alert Data](./Alert_API.md#GetAlertData)
   - [`GET  /alert/:alertId/status/` - Get Alert Status Information](./Alert_API.md#GetAlertStatus)
+- [Device Parameter API](./Device_Parameter_API.md)
+  - [`GET  /params/read-realtime/` - Read current value of the parameter from the device](./Device_Parameter_API.md#RealtimeReadParams)
+  - [`POST /param/:paramId/write/` - Write parameter value to the device](./Device_Parameter_API.md#WriteParam)
