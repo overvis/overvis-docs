@@ -14,7 +14,7 @@ In the "Source (SVG)" field you can enter any HTML/SVG/JavaScript code and it wi
 
 Let's try a simple example. We will insert the following code as a source:
 
-```
+```html
 Any HTML or SVG code here will be displayed as is.<br><br>
 
 For example, <b>this text will be in bold font.</b><br><br>
