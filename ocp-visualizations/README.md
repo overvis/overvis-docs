@@ -2,17 +2,17 @@
 
 _Overvis is a monitoring and control system for the industrial MODBUS-based equipment. You can find more information and create a free account on our site: https://www.overvis.com/_
 
-Overvis connects to the devices, sends and receives the data, processes the alarms and does many other things out of the box. But in the end, you want to see a visual dashboard which represents the current state of your equipment and some remote control buttons. Such dashboards in Overvis are called "visualizations".
+Overvis connects to the devices, sends and receives the data, processes the alarms, and does many other things out of the box. But in the end, you want to see a visual dashboard that represents the current state of your equipment and some remote control buttons. Such dashboards in Overvis are called "visualizations".
 
 ![Demo visualization](img-demo.png)
 
 Overvis visualization feature is low-level enough and flexible enough to create a wide range of dashboards using different engineering approaches.
 
-This set of documentation and tutorials will help you to create your own visualizations to Overvis monitoring system. We will guide you through several examples. Using this information you will be able to make graphics with the binded data and expand further, to create monitoring dashboards of any complexity.
+This set of documentation and tutorials will help you to start developing Overvis visualizations. We will guide you through several examples. Using this information, you will be able to make graphics with the bound data and expand further to create monitoring dashboards of any complexity.
 
 To be able to create Overvis visualizations using our tutorials, you will need the following:
-* You have to already know how to connect your equipment to Overvis.
-* You will need some vector graphics editor that can export images as SVG. We will be using Affinity Designer, but you can use any other free or paid editor: Inkscape, Adobe Illustrator, Sketch, etc. There is also [svg-edit](https://svg-edit.github.io/svgedit/dist/editor/index.html), online editor that should fit any basic needs.
+* You should already know how to connect your equipment to Overvis.
+* You will need some vector graphics editor that can export images as SVG. We will be using Affinity Designer, but you can use any other free or paid editor: Inkscape, Adobe Illustrator, Sketch, etc. There is also [svg-edit](https://svg-edit.github.io/svgedit/dist/editor/index.html), the online editor that should fit any basic needs.
 * You will also need a text editor that can work with SVG (XML) text (Notepad+, VisualStudio Code, Atom, Sublime Text, or any other).
 * We also assume that you know what SVG is. You can look at [SVG tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial) but you won't need any deep knowledge of this topic to create simple visualizations in Overvis.
 

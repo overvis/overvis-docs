@@ -124,7 +124,7 @@ Example | Description
 
 ### Real-time readings vs. last known readings
 
-By default, the value of the parameter is taken from the Overvis database, not read from the device. This makes visualisation refresh much faster, but it has the following consequences:
+By default, the value of the parameter is taken from the Overvis database, not read from the device. This makes visualization refresh much faster, but it has the following consequences:
 
 * Only tracked parameter values are stored in the database.
 * The update period of the value depends on the update of the device beckground readings (specified in the device settings) and not on the refresh rate of visualization.

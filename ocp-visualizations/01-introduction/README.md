@@ -38,7 +38,7 @@ We can even place it on the main Overvis dashboard:
 
 This visualization is static and doesn't have any useful data displayed.
 
-You can add some values dynamically with the use of Overvis API and custom JavaScript code. Most complex visualisations we create do exactly that. But, thankfully, you don't have to do this for the majority of the cases. Overvis supports special HTML/SVG attributes to display data values or modify other attributes. Those are called "data bindings".
+You can add some values dynamically with the use of Overvis API and custom JavaScript code. Most complex visualizations we create do exactly that. But, thankfully, you don't have to do this for the majority of the cases. Overvis supports special HTML/SVG attributes to display data values or modify other attributes. Those are called "data bindings".
 
 In the next section we will create a more complex drawing with some data bindings that will display the actual state of the equipment.
 
