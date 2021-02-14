@@ -26,8 +26,8 @@ Now clicking on the setpoint value opens the "Edit value" window:
 
 ![Fridge temperature value](img-setpoint-in-action.png)
 
-`on-click` attribute can do several other things, like sending user to another visualization, increment the paramers by one, toggle the parameter between two values, and some other. We will use some of this features later in the tutorial. For a full list, please see the reference section.
+`on-click` attribute can do several other things, like sending a user to another visualization, increment the parameters, toggle the parameter between two values, etc. We will use some of these features later in the tutorial. For a full list, please see [the reference section.](../../../09-reference/README.md)
 
-As a final change we have also added `cursor:pointer;` into the content of the `style` attribute. It just changes the mouse cursor to the "finger" pointer when user hovers over the setpoint value.
+As a final change, we have also added `cursor:pointer;` into the content of the `style` attribute. It just changes the mouse cursor to the "finger" pointer when a user hovers over the setpoint value.
 
 Next: [Showing/hiding elements depending on the parameter value](../03-show-hide/README.md)
