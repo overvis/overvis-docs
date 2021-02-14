@@ -2,25 +2,25 @@
 
 [< Return to the table of contents](../README.md)
 
-Overvis visualization source code is a HTML snippet. This snippet code is not processed on server-side and is embeded inside the Overvis page HTML as-is. It can contain JavaScript inside `<script>` tags, CSS inside `<style>` tags, or SVG images inside `<svg>` tags. It should not contain `<!...>`, `<html>`, `<head>`, `<body>` or other header tags because they are already present on Overvis page.
+Overvis visualization source code is an HTML snippet. This snippet code is not processed on the server-side and is embedded inside the Overvis page HTML as-is. It can contain JavaScript inside `<script>` tags, CSS inside `<style>` tags, or SVG images inside `<svg>` tags. It should not contain `<!...>`, `<html>`, `<head>`, `<body>` or other header tags because they are already present on the Overvis page.
 
-There are several extension tags and attributes that are added by the JavaScript on the Overvis page to simplify visualization data binding. The following reference will list all such additions. Visualization code is not required to use them and can directly call Overvis API instead.
+There are several extension tags and attributes that are added by the JavaScript to the Overvis page for simplifying visualization data binding. The following reference will list all such additions. Visualization code is not required to use them and can directly call Overvis API instead.
 
-In the reference below, the follwing syntax: `update-period-sec="{{number}}"` means that the  double curly braces should be replaced by the referenced value type. In this example the correct usage will be something like this: `update-period-sec="60"`.
+In the reference below, the following syntax: `update-period-sec="{{number}}"` means that the double curly braces should be replaced by the referenced value type. In this example, the correct usage will be something like this: `update-period-sec="60"`.
 
 ## Refresh process
 
-After visualization is loaded, it gathers all used data bindings from the source code and starts automatic data refresh process. Visualization data is being refreshed every 10 seconds by default.
+After the visualization is loaded, it gathers all used data bindings from the source code and starts the automatic data refresh process. Visualization data is being refreshed every 10 seconds by default.
 
-Next refresh cycle doesn't start before the previous one is finished. The length of the refresh cycle depends on how many parameters are being read from the devices and the connection quality. So, if there are many parameter readings are requested at once from the slow channel, the refresh cycle may take more time than planned. To optimize the refresh cycle time, prefer to load parameter values from Overvis database instead of reading it from the devices directly.
+The next refresh cycle doesn't start before the previous one is finished. The length of the refresh cycle depends on how many parameters are being read from the devices and the connection quality. So, if there are many parameter readings to be requested at once from the slow channel, the refresh cycle may take more time than planned. To optimize the refresh cycle time, prefer loading parameter values from the Overvis database instead of reading them from the devices directly.
 
 ## Visualization settings
 
-First `<svg>` tag on the page, or any tag with the class `vis-settings` can contain following additional attributes:
+The first `<svg>` tag on the page or any tag with the class `vis-settings` can contain the following additional attributes:
 
 Attribute | Default | Description
 ----------|---------|------------
-`update-period-sec="{{number}}"` | 10 | Refresh rate of the visualization in seconds. See [refresh process.](#Refresh_process) `0` - refresh immediately after the previous refresh cycle is finished.
+`update-period-sec="{{number}}"` | 10 | Refresh period of the visualization in seconds. See [refresh process.](#Refresh_process) `0` - refresh immediately after the previous refresh cycle is finished.
 `refresh-button="{{yes/no}}"` | yes | `no` - hides the refresh button in the top-left corner of the visualization.
 `use-vis-data="{{yes/no}}"` | no | `yes` - enables the initial loading of the visualization strings table data. See [visualization strings table.](#Visualization_strings_data)
 
@@ -31,12 +31,12 @@ Those functions are added to the global `window` object and accessible everywher
 Function | Description
 ---------|------------
 `preInitViz(cb)` | This function is called after the visualization source code is embedded in the page, but before the references and aliases are being resolved. This function can add additional binds or modify visualization source code. `cb` is a callback function that should be invoked at the end of `preInitVis`.
-`onVizUpdate(data)` | This function is invoked after any binded data is received (at least after each refresh cycle). `data` is an object with references as keys.
-`writeParamValue(ref, val, cb, refreshAll)` | Send parameter value to the device. `ref` - parameter reference; `val` - value as a string; `cb` - function that should be called after the write process will be finished; `refreshAll` - boolean, if true - refresh all data on the visualization, if false - refresh only the changed parameter.
+`onVizUpdate(data)` | This function is invoked after any bound data is received (at least after each refresh cycle). `data` is an object with references as keys.
+`writeParamValue(ref, val, cb, refreshAll)` | Send parameter value to the device. `ref` - parameter reference; `val` - value as a string; `cb` - a function that should be called after the writing process will be finished; `refreshAll` - boolean, if true - refresh all data on the visualization, if false - refresh only the changed parameter.
 
 ## Referencing objects
 
-All referenced objects should exist in Overvis. For example, you can't reference network by IP/MAC address if the network with this IP or MAC is not created under your account.
+All referenced objects should exist in Overvis. For example, you can't reference the network by IP/MAC address if the network with this IP or MAC is not created under your account.
 
 ### Networks can be referenced in one of the following ways:
 
@@ -45,8 +45,8 @@ Syntax | Example | Description
 `#{{number}}` | `#123` | By system ID.
 `[{{slug string}}]` | `[my-network]` | By the slug string. Slug is a unique code assigned to each object. It can be taken from the URL of the network page in Overvis.
 `~{{alias name string}}` | `~someNetwork` | Using alias. Alias with this name should be provided by the `alias` tag in visualization code.
-`{{ipv4 address}}` | `123.66.11.34` | By network IP address (without port) for networks with direct connection.
-`{{mac address}}` | `12-34-56-78-90-ab` | By network MAC address for networks with backward connection. Network MAC can be seen on the network settings page.
+`{{ipv4 address}}` | `123.66.11.34` | By network IP address (without port) for networks with a direct connection.
+`{{mac address}}` | `12-34-56-78-90-ab` | By network MAC address for networks with a backward connection. Network MAC can be seen on the network settings page.
 
 ### Devices can be referenced in one of the following ways:
 
