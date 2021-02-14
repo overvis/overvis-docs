@@ -2,23 +2,25 @@
 
 [< Return to the table of contents](../../README.md)
 
-First, let's find the setpoint value for the first fridge in the SVG code:
+Our visualization has the "setpoint" control for each fridge. It should allow us to modify the setpoint setting on the fridge controller devices.
+
+Here is the setpoint value for the first fridge in the SVG code:
 
 ![Fridge temperature value](img-setpoint-in-code.png)
 
-We want to be able to change it from the visualization. To give that ability, we modify the `text` tag as follows:
+We want to give the ability to change the setpoint by clicking on this value. To do so, we modify the `text` tag as following:
 
 ```xml
 <text x="135.373px" y="142.406px" style="font-family:'DroidSans', 'Droid Sans', sans-serif;font-size:16px;fill:rgb(37,182,255);cursor:pointer;" param-value="11-22-33-44-55-66>1>201:r" on-click="edit-param:11-22-33-44-55-66>1>201">-</text>
 ```
 
-Again, we removed the placeholder value and replaced it with dash.
+Again, we removed the placeholder value and replaced it with the dash symbol.
 
 The `param-value="11-22-33-44-55-66>1>201:r"` attribute works the same as previously, it just displays the current value that was read directly from the device.
 
-More importantly, we have added a new attribute: `on-click="edit-param:11-22-33-44-55-66>1>201"`. It says: if user clicks on this element, open edit window, that should request new value for the parameter with the address **201 (holding)** of the device with the address **1** in the network with MAC address **11-22-33-44-55-66**. When user enters the new value and saves it, Overvis will send that value to the device parameter and update the visualization afterwards.
+More importantly, we have added a new attribute: `on-click="edit-param:11-22-33-44-55-66>1>201"`. It says: if user clicks on this element, open the edit dialog window. It should request a new value for the parameter with the address **201 (holding)** of the device with the address **1** in the network with MAC address **11-22-33-44-55-66**. When user enters the value and saves it, Overvis will send that value to the device parameter and update the visualization afterward.
 
-Now clicking on the setpont value opens the "Edit value" window:
+Now clicking on the setpoint value opens the "Edit value" window:
 
 ![Fridge temperature value](img-setpoint-in-action.png)
 
