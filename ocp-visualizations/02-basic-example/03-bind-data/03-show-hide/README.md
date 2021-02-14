@@ -2,6 +2,8 @@
 
 [< Return to the table of contents](../../README.md)
 
+![Alert image](img-alert-visual.png)
+
 The idea with alert indicators is to show them only when the alert is triggered. In [the example fridge controller device](../01-param-value/README.md) we have two alert parameters: **1 (discrete)** and **2 (discrete)**. Let's find an alert indicator of the first fridge in SVG source:
 
 ![Alert indicator code](img-alert-code.png)
