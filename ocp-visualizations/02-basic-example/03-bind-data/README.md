@@ -6,7 +6,7 @@ For the rest of this example, we assume that we have the following network of de
 
 ![Devices in the example network](img-net-devices.png)
 
-In the network settings we can see the network controller MAC address. We will need it later:
+In the network settings, we can see the network controller MAC address. We will need it later:
 
 ![Settings of the example network](img-net-settings.png)
 
