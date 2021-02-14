@@ -2,7 +2,7 @@
 
 [< Return to the table of contents](../../README.md)
 
-To make a toggle control we will use `on-param-value` combined with `on-click`. We have designed an positioned two variants of the control: on and off. We will display one of them depending on the current parameter value. Clicking on any of the variants will flip the parameter value.
+To make a toggle control we will use `on-param-value` combined with `on-click`. We have designed and positioned two variants of the control: on and off. We will display one of them depending on the current parameter value. Clicking on any of the variants will flip the parameter value.
 
 Here is the resulting code:
 
@@ -21,11 +21,11 @@ Here is the resulting code:
 </g>
 ```
 
-Both `g` elements that represent button variants now have `on-param-value` attribute. It differs only in condition. On state has `=1` condition, off state has `=0`.
+Both `g` elements that represent button variants now have an `on-param-value` attribute. It differs only in condition. On state has `=1` condition, off state has `=0`.
 
-The group that contains both variants now has `on-click="toggle-param:11-22-33-44-55-66>20>105:0:1:g"`. It says that when this element (in any state) is clicked, the parameter **105** of the device **20** has to be changed to **0** if it is not already zero, otherwise to **1**. `:g` at the end means that all data in the visualization should be updated after that, because we want to see not only the change of the toggle, but also changes in other parts.
+The group that contains both variants now has `on-click="toggle-param:11-22-33-44-55-66>20>105:0:1:g"`. It says that when this element (in any state) is clicked, the parameter **105** of the device **20** has to be changed to **0** if it is not already zero, otherwise to **1**. `:g` at the end means that all data in the visualization should be updated after that because we want to see not only the change of the toggle but also changes in other parts.
 
-Also we added the `style="cursor:pointer;"` to change the mouse cursor on hover.
+Also, we added the `style="cursor:pointer;"` to change the mouse cursor on hover.
 
 Result:
 
