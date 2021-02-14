@@ -18,6 +18,6 @@ Currently, the door is open:
 
 ![Door is open](img-door-open.png)
 
-By the way, `on-param-value` attribute can not only change the styles of the elements but also the values of other attributes. Syntax is the same.
+By the way, `on-param-value` attribute can not only change the styles of the elements but also the values of other attributes. The syntax is the same.
 
 Next: [Adding a toggle control](../05-toggle/README.md)
