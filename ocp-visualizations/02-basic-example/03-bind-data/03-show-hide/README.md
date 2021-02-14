@@ -26,7 +26,7 @@ We will change it as follows:
 
 We have set the default `display` style to `none`, which means this element (alarm indicator) won't be visible initially. If the alarm register will contain 1 when the data will be read from the device, Overvis will change the `display` style to `block` and make this indicator visible.
 
-What about the `Tmax` alarm? We will use the fact that both `Tmin` and `Tmax` should be never active at the same time. We can just copy the alarm indicator, change the text and the register address in the condition. When register 1 will be on, the first alarm will be shown. If register 2 will be on, the second one will be displayed, while the first one is hidden.
+What about the `Tmax` alarm? We will use the fact that both `Tmin` and `Tmax` should be never active at the same time. We can just copy the alarm indicator, change the text and the register address in the condition. If register 1 is on, the first alarm will be shown. If register 2 is on, the second one will be displayed, while the first one is hidden.
 
 ```xml
 <g id="alarm3" serif:id="alarm tmin" on-param-value="11-22-33-44-55-66>1>1d:=1:display:block:none:r" style="display:none;">
