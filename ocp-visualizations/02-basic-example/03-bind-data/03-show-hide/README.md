@@ -51,6 +51,6 @@ In the result, we see that only fridge 1 triggers `Tmin` and only fridge 3 trigg
 
 ![Alerts working](img-alerts-working.png)
 
-_What if we would require to display several alarms at once? Then we would have to design and position each alarm indicator separately and use `on-param-value` for each of them. Or design some smart JavaScript code to dynamically position indicators. This is an information representation design problem and requires a more complicated approach in some cases. Especially when the density of the information displayed is getting higher._
+_What if we would require to display several alarms at once? Then we would have to design and position each alarm indicator separately and use `on-param-value` for each of them. Or design some smart JavaScript code to dynamically position indicators. This is an information representation design problem and it may require a more complicated approach in some cases. Especially when the density of the information displayed is getting higher._
 
 Next: [Changing the color of an element depending on the parameter value](../04-change-color/README.md)
