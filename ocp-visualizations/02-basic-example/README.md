@@ -2,7 +2,7 @@
 
 [< Return to the table of contents](../README.md)
 
-In this tutorial we will create a simple SVG visualization that will show a refrigeration equipment in a cold storage room and have several interactive elements.
+In this tutorial, we will create a simple SVG visualization. It will represent some refrigeration equipment in a cold storage room and have several interactive elements.
 
 ![Final result](img-result.png)
 
