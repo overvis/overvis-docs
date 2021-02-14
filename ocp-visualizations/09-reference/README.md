@@ -20,9 +20,9 @@ The first `<svg>` tag on the page or any tag with the class `vis-settings` can c
 
 Attribute | Default | Description
 ----------|---------|------------
-`update-period-sec="{{number}}"` | 10 | Refresh period of the visualization in seconds. See [refresh process.](#Refresh_process) `0` - refresh immediately after the previous refresh cycle is finished.
+`update-period-sec="{{number}}"` | 10 | Refresh period of the visualization in seconds. See [refresh process.](#refresh-process) `0` - refresh immediately after the previous refresh cycle is finished.
 `refresh-button="{{yes/no}}"` | yes | `no` - hides the refresh button in the top-left corner of the visualization.
-`use-vis-data="{{yes/no}}"` | no | `yes` - enables the initial loading of the visualization strings table data. See [visualization strings table.](#Visualization_strings_data)
+`use-vis-data="{{yes/no}}"` | no | `yes` - enables the initial loading of the visualization strings table data. See [visualization strings table.](#visualization-strings-table)
 
 ## Additional JavaScript functions
 
@@ -242,7 +242,7 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 * `edit-visdata:{{key}}`
 
-    Open the dialog window to edit and save the visualization string with key `{{key}}`. See [visualization strings table.](#Visualization_strings_table)
+    Open the dialog window to edit and save the visualization string with key `{{key}}`. See [visualization strings table.](#visualization-strings-table)
 
 `{{options}}` is a comma-separated list of flags. Currently supported flags:
 
