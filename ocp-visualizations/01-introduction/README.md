@@ -2,15 +2,15 @@
 
 [< Return to the table of contents](../README.md)
 
-First, let's open visualizations page in the Overvis menu. You will see the list of all visualizations that are created under your account. This list is probably empty for you now.
+First, let's open the visualizations page in the Overvis menu. You will see the list of all visualizations created for your organization. This list is probably empty for you now.
 
 ![Visualizations page](img-empty.png)
 
-Clicking "Create new" button you will see the following form:
+Clicking the "Create new" button you will see the following form:
 
 ![Create new visualization](img-create-new.png)
 
-In the "Source (SVG)" field you can enter any HTML/SVG/JavaScript code and it will be inserted on the page that is chosen in the "Display on" drop-down. That's the basics of the Overvis visualizations.
+In the "Source (SVG)" text-box, you can enter any HTML/SVG/JavaScript code. It will be inserted on the page chosen in the "Display on" drop-down. That's the basics of the Overvis visualizations.
 
 Let's try a simple example. We will insert the following code as a source:
 
@@ -38,8 +38,8 @@ We can even place it on the main Overvis dashboard:
 
 This visualization is static and doesn't have any useful data displayed.
 
-You can add some values dynamically with the use of Overvis API and custom JavaScript code. Most complex visualizations we create do exactly that. But, thankfully, you don't have to do this for the majority of the cases. Overvis supports special HTML/SVG attributes to display data values or modify other attributes. Those are called "data bindings".
+You can add some values dynamically with the use of Overvis API and custom JavaScript code. Most complex visualizations we create do exactly that. But, thankfully, you don't have to do this for the majority of the cases. Overvis supports custom HTML/SVG attributes to display data values or modify other attributes. Those are called "data bindings."
 
-In the next section we will create a more complex drawing with some data bindings that will display the actual state of the equipment.
+In the next section of the tutorial, we will create a more complex graphic. It will contain some data bindings that will display the actual state of the equipment.
 
 Next: [Basic SVG visualization example](../02-basic-example/README.md)
