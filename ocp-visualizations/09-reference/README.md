@@ -99,7 +99,7 @@ Any container tag in HTML/SVG code has the additional possible attribute:
 param-value="{{paramRef}}:{{options}}"
 ```
 
-This attribute specifies that the contents of this tag should be replaced by the value of the parameter referenced by `{{paramRef}}`. By default this value will be taken from Overvis database of last known parameter values.
+This attribute specifies that the contents of this tag should be replaced by the value of the parameter referenced by `{{paramRef}}`. By default, this value will be taken from the Overvis database of last known parameter values.
 
 `{{options}}` is a comma-separated list of flags. Currently supported flags:
 * `r` - read data directly from the device,
@@ -111,38 +111,38 @@ Also, the following attribute can be used in conjunction with `param-value`:
 param-value-mod="{{evalExpr}}"
 ```
 
-It applies quick mathematical expression `evalExpr` where current value will be passed as `x`.
+It applies the quick mathematical expression `evalExpr` where the current value will be passed as `x`.
 
 Few examples:
 
 Example | Description
 --------|------------
-`<div param-value="12-34-56-78-90-ab>111>123">loading...</div>` | Placeholder text `loading...` will be replaced with the value of parameter 123 of the device 111 in the network 12-34-56-78-90-ab. Value will be taken from database, so this parameter should be marked as tracked in the system.
-`<div param-value="12-34-56-78-90-ab>111>123:r" />` | Value of the parameter will be read from the device on each refresh. Parameter can be untracked.
-`<div param-value="12-34-56-78-90-ab>111>123:r,p3" />` | Real-time value of the parameter with precision of 3 digits.
-`<div param-value="12-34-56-78-90-ab>111>123" param-value-mod="x*2+1" />` | Value of the parameter will be multiplied by 2 and increased by 1.
+`<div param-value="12-34-56-78-90-ab>111>123">loading...</div>` | Placeholder text `loading...` will be replaced with the value of parameter 123 of the device 111 in the network 12-34-56-78-90-ab. Value will be taken from the database, so this parameter should be marked as tracked in the system.
+`<div param-value="12-34-56-78-90-ab>111>123:r" />` | The value of the parameter will be read from the device on each refresh. The parameter can be untracked.
+`<div param-value="12-34-56-78-90-ab>111>123:r,p3" />` | Real-time value of the parameter with 3-digits precision.
+`<div param-value="12-34-56-78-90-ab>111>123" param-value-mod="x*2+1" />` | The value of the parameter will be multiplied by 2 and increased by 1.
 
 ### Real-time readings vs. last known readings
 
 By default, the value of the parameter is taken from the Overvis database, not read from the device. This makes visualization refresh much faster, but it has the following consequences:
 
 * Only tracked parameter values are stored in the database.
-* The update period of the value depends on the update of the device beckground readings (specified in the device settings) and not on the refresh rate of visualization.
-* If there is no connection to the network, the last known value will still be displayed.
-* If this parameter is untracked or was never read yet, `NOLR` will be displayed instead.
+* The update interval of the value depends on the update of the device background readings (specified in the device settings) and not on the visualization refresh period.
+* If there is no network connection, the last known value will still be displayed.
+* If the parameter is untracked or has never been read yet, `NOLR` will be displayed instead.
 
-If you want to perform an actual reading of the device parameter, set `:r` option at the end. In this case:
+If you want to perform an actual reading of the device parameter, set the `:r` option at the end. In this case:
 
-* It doesn't matter if parameter is tracked or untracked.
-* Value of the parameter is read from the device after each visualization refresh cycle (usually each 10s).
-* If connection with the network is missing, `NORV` is displayed.
+* It doesn't matter if the parameter is tracked or untracked.
+* The value of the parameter is read from the device after each visualization refresh cycle (usually every 10s).
+* If the network connection is missing, `NORV` is displayed.
 
 ### Error indicators
 
-There are several special codes that are returned by the server on various exceptions. You may see them instead of the parameter value:
+Several special codes are returned by the server on various exceptions. You may see them instead of the parameter value:
 * `NON` - parameter network does not exist.
 * `NOP` - parameter does not exist.
-* `NOLR` - no last reading for the parameter in the database (parameter was never read). That usually means that this parameter is untracked. Mark it as tracked or use real-time value reading.
+* `NOLR` - no last reading for the parameter in the database (parameter has never been read). That usually means that this parameter is untracked. Mark it as tracked or use real-time value reading.
 * `NORV` - error reading parameter value from the device. Try to read it on the device parameters list page to see the actual error.
 
 ## React on the parameter value change: `on-param-value="..."` attribute
