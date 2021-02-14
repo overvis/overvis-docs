@@ -4,6 +4,8 @@
 
 Our visualization has the "setpoint" control for each fridge. It should allow us to modify the setpoint setting on the fridge controller devices.
 
+![Fridge setpoint control](img-setpoint-control.png)
+
 Here is the setpoint value for the first fridge in the SVG code:
 
 ![Fridge temperature value](img-setpoint-in-code.png)
