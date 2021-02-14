@@ -36,5 +36,4 @@ Table of contents:
 * [More examples](06-more-examples/README.md)
 * [Common questions](07-common-questions/README.md)
 * [Contact us if you need any help](08-contact-us/README.md)
-    * [Plans for the future](07-contact-us/01-plans/README.md)
 * [Reference](09-reference/README.md)
