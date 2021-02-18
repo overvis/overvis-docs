@@ -93,7 +93,7 @@ Syntax | Example | Description
 
 ## Display parameter value: `param-value="..."` attribute
 
-Any container tag in HTML/SVG code has the additional possible attribute:
+Any container tag in HTML/SVG code has an additional possible attribute:
 
 ```
 param-value="{{paramRef}}:{{options}}"
@@ -143,11 +143,11 @@ Several special codes are returned by the server on various exceptions. You may 
 * `NON` - parameter network does not exist.
 * `NOP` - parameter does not exist.
 * `NOLR` - no last reading for the parameter in the database (parameter has never been read). That usually means that this parameter is untracked. Mark it as tracked or use real-time value reading.
-* `NORV` - error reading parameter value from the device. Try to read it on the device parameters list page to see the actual error.
+* `NORV` - error reading parameter value from the device. Try reading it on the device parameters list page to see the actual error.
 
 ## React on the parameter value change: `on-param-value="..."` attribute
 
-Any tag in HTML/SVG code has the additional possible attribute:
+Any tag in HTML/SVG code has an additional possible attribute:
 
 ```
 on-param-value="{{paramref}}:{{condition}}:{{property}}:{{valueOn}}:{{valueOff}}:{{options}}"
@@ -174,19 +174,19 @@ Few examples:
 
 Example | Description
 --------|------------
-`<div on-param-value="12-34-56-78-90-ab>111>123:>10:color:red:green">pressure</div>` | Set text style color to red if parameter value is greater than 10. Otherwise - green. Value is taken from Overvis database, so the parameter should be tracked.
-`<div on-param-value="12-34-56-78-90-ab>111>123:<20:display:block:none:r">alert!</div>` | Text `"alert!"` will be visible if parameter value is less than 20. Value is read from the device in real-time. By default (until the value is loaded), text is hidden.
-`<text on-param-value="12-34-56-78-90-ab>111>123:{x<10\|\|x>20}:color:red:green:r">pressure</text>` | If parameter value is less than 10 or larger than 20, text `"pressure"` will be displayed in red.
+`<div on-param-value="12-34-56-78-90-ab>111>123:>10:color:red:green">pressure</div>` | Set text style color to red if the parameter value is greater than 10. Otherwise - green. Value is taken from the Overvis database, so the parameter should be tracked.
+`<div on-param-value="12-34-56-78-90-ab>111>123:<20:display:block:none:r">alert!</div>` | Text `"alert!"` will be visible if the parameter value is less than 20. The value is read from the device in real-time. By default (until the value is loaded), the text is hidden.
+`<text on-param-value="12-34-56-78-90-ab>111>123:{x<10\|\|x>20}:color:red:green:r">pressure</text>` | If the parameter value is less than 10 or larger than 20, the text `"pressure"` will be displayed in red.
 
 ## React on the connection status change: `on-net-connection="..."` attribute
 
-Any tag in HTML/SVG code has the additional possible attribute:
+Any tag in HTML/SVG code has an additional possible attribute:
 
 ```
 on-net-connection="{{netRef}}:{{property}}:{{valueOn}}:{{valueOff}}"
 ```
 
-This attribute toggles the property or style specified by `{{property}}` between `{{valueOn}}` and `{{valueOff}}` depending if network referenced by `{{netRef}}` has connection or not.
+This attribute toggles the property or style specified by `{{property}}` between `{{valueOn}}` and `{{valueOff}}` depending if the network referenced by `{{netRef}}` has connection or not.
 
 Example:
 
@@ -196,7 +196,7 @@ Example | Description
 
 ## Recact on the click action: `on-click="..."` attribute
 
-Any interactable tag in HTML/SVG code has the additional possible attribute:
+Any interactable tag in HTML/SVG code has an additional possible attribute:
 
 ```
 on-click="{{action}}"
@@ -208,19 +208,19 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 * `goto:param:{{paramRef}}`
 
-    Open history of the parameter readings.
+    Open the history of the parameter readings.
 
 * `goto:params:{{paramRef}},{{paramRef}},...`
 
-    Open comparison of parameter readings.
+    Open comparison of the parameter readings.
 
 * `goto:device:{{deviceRef}}`
 
-    Open device parameters list page.
+    Open the device parameters list page.
 
 * `goto:network:{{networkRef}}`
 
-    Open network page.
+    Open the network page.
 
 * `goto:vis:{{visualizationRef}}`
 
@@ -228,9 +228,9 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 * `toggle-param:{{paramRef}}:{{defaultValue}}:{{valueOn}}:{{options}}`
 
-    If the parameter `{{paramRef}}` has value different from `{{defaultValue}}` then set it to `{{defaultValue}}`, otherwise set it to `{{valueOn}}`.
+    If the parameter `{{paramRef}}` has the value different from `{{defaultValue}}` it should be set to `{{defaultValue}}`, otherwise `{{valueOn}}`.
 
-    Example: `<button on-click="toggle-param:12-34-56-78-90-ab>1>123:0:1:g">Toggle power</button>` - toggle parameter 123 between 0 and 1, where 0 is the default value. After the toggle, does a full visualization refresh (because of `:g` option at the end).
+    Example: `<button on-click="toggle-param:12-34-56-78-90-ab>1>123:0:1:g">Toggle power</button>` - toggle parameter 123 between 0 and 1, where 0 is the default value. After the toggle, full visualization refresh is done (because of the `:g` option at the end).
 
 * `edit-param:{{paramRef}}:{{options}}`
 
@@ -238,19 +238,19 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 * `increment-param:{{paramRef}}:{{amount}}:{{options}}`
 
-    Add `{{amount}}` to the value of the parameter `{{paramRef}}` and save the new value. Amount can be negative. Parameter is refreshed before being incremented and written to the device.
+    Add `{{amount}}` to the value of the parameter `{{paramRef}}` and save the new value. Amount can be negative. The parameter is refreshed before being incremented and written to the device.
 
 * `edit-visdata:{{key}}`
 
-    Open the dialog window to edit and save the visualization string with key `{{key}}`. See [visualization strings table.](#visualization-strings-table)
+    Open the dialog window to edit and save the visualization string with the key `{{key}}`. See [visualization strings table.](#visualization-strings-table)
 
 `{{options}}` is a comma-separated list of flags. Currently supported flags:
 
-* `g` - after the action, do a complete refresh of all visualization data. If ommitted, by default - only the affected parameters will be refreshed.
+* `g` - after the action, do a complete refresh of all visualization data. If omitted, by default - only the affected parameters will be refreshed.
 
 ## Aliasing: `<alias>` tag
 
-Additional tag can be used anywhere in the code:
+An additional tag can be used anywhere in the code:
 
 ```html
 <alias name="{{aliasName}}" ... />
@@ -263,7 +263,7 @@ Alias tag should contain `name` attribute which specifies the name of the alias 
 * `param="{{paramRef}}"`
 * `vis="{{visualizationRef}}"`
 
-Aliases are used when one object has to be referenced several times in the code.  It helps to make the references more understandable by giving them names. Also it allows to quickly change the target object, for example, if network controller was replaced and network MAC was changed.
+Aliases are used when one object has to be referenced several times in the code.  It helps to make the references more understandable by giving them names. Also, it allows to quickly change the target object, for example, if the network controller was replaced and network MAC was changed.
 
 Aliases can be used in references by specifying alias name after `~` (tilde symbol). Also, aliases can be used inside other aliases, e.g. network alias can be used inside the device alias.
 
