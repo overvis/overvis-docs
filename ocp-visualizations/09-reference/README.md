@@ -212,7 +212,7 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 * `goto:params:{{paramRef}},{{paramRef}},...`
 
-    Open comparison of the parameter readings.
+    Open the comparison of the parameter readings.
 
 * `goto:device:{{deviceRef}}`
 
@@ -246,7 +246,7 @@ It specifies the action which should be taken when user clicks or taps on this e
 
 `{{options}}` is a comma-separated list of flags. Currently supported flags:
 
-* `g` - after the action, do a complete refresh of all visualization data. If omitted, by default - only the affected parameters will be refreshed.
+* `g` - after the action is completed, do a complete refresh of all visualization data. If omitted, by default - only the affected parameters will be refreshed.
 
 ## Aliasing: `<alias>` tag
 
@@ -256,14 +256,14 @@ An additional tag can be used anywhere in the code:
 <alias name="{{aliasName}}" ... />
 ```
 
-Alias tag should contain `name` attribute which specifies the name of the alias and one of the following attributes which specify the alias target:
+Alias tag should contain `name` attribute which specifies the name of the alias and one of the following attributes which specifies the alias target:
 
 * `network="{{networkRef}}"`
 * `device="{{deviceRef}}"`
 * `param="{{paramRef}}"`
 * `vis="{{visualizationRef}}"`
 
-Aliases are used when one object has to be referenced several times in the code.  It helps to make the references more understandable by giving them names. Also, it allows to quickly change the target object, for example, if the network controller was replaced and network MAC was changed.
+Aliases are used when the object has to be referenced several times in the code.  It helps to make the references more understandable by giving them names. Also, it allows to quickly change the target object, for example, if the network controller was replaced and the network MAC was changed.
 
 Aliases can be used in references by specifying alias name after `~` (tilde symbol). Also, aliases can be used inside other aliases, e.g. network alias can be used inside the device alias.
 
@@ -278,9 +278,9 @@ Example code:
 
 ## Visualization strings table
 
-Visualizations can store string values to Overvis database as key-value pairs. All stored values are loaded during the visualization start-up if `use-vis-data="yes"` specified in visualization settings tag.
+Visualizations can store string values to the Overvis database as key-value pairs. All stored values are loaded during the visualization start-up if `use-vis-data="yes"` specified in visualization settings tag.
 
-To edit the value, use Overvis API. Also the value can be edited by the user though dialog. To open the dialog, add the `on-click="edit-visdata:{{key}}"` attribute to the button.
+To edit the value, use Overvis API. Also, the value can be edited by the user through the dialog window. To open the dialog window, add the `on-click="edit-visdata:{{key}}"` attribute to the button.
 
 The following attribute allows you to use stored strings.
 
@@ -292,7 +292,7 @@ Any container tag in HTML/SVG code has the additional possible attribute:
 text-replacement="{{key}}"
 ```
 
-It specifies, that the content of the tag should be replaced with the stored string with the key `{{key}}`.
+It specifies that the content of the tag should be replaced with the stored string with the key `{{key}}`.
 
 Example:
 
