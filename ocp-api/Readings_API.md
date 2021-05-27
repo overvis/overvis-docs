@@ -28,7 +28,7 @@ POST /readings/dispersed/
 
 ```bash
 TOKEN=`curl -s -H "Content-Type: application/json" \
-    -d '{"apiKey": "ca09571a-79d9-4e07-8c84-2bc5f60189e3" }' \
+    -d '{"apiKey": "513cf747-eb5c-4d5f-931f-d22c9872c73c", "password": "DCdcSLmkoZkU5zGI9gpInDbo" }' \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
@@ -82,7 +82,7 @@ GET /readings/get/
 
 ```bash
 TOKEN=`curl -s -H "Content-Type: application/json" \
-    -d '{"apiKey": "ca09571a-79d9-4e07-8c84-2bc5f60189e3" }' \
+    -d '{"apiKey": "513cf747-eb5c-4d5f-931f-d22c9872c73c", "password": "DCdcSLmkoZkU5zGI9gpInDbo" }' \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
@@ -126,7 +126,7 @@ GET /readings/date-range/
 
 ```bash
 TOKEN=`curl -s -H "Content-Type: application/json" \
-    -d '{"apiKey": "ca09571a-79d9-4e07-8c84-2bc5f60189e3" }' \
+    -d '{"apiKey": "513cf747-eb5c-4d5f-931f-d22c9872c73c", "password": "DCdcSLmkoZkU5zGI9gpInDbo" }' \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
@@ -165,7 +165,7 @@ POST /readings/min-max-range/
 
 ```bash
 TOKEN=`curl -s -H "Content-Type: application/json" \
-    -d '{"apiKey": "ca09571a-79d9-4e07-8c84-2bc5f60189e3" }' \
+    -d '{"apiKey": "513cf747-eb5c-4d5f-931f-d22c9872c73c", "password": "DCdcSLmkoZkU5zGI9gpInDbo" }' \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
