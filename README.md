@@ -8,6 +8,9 @@ http://www.overvis.com/
 
 [Overvis Visualizations](./ocp-visualizations/README.md)
 
+[Overvis Alert Templates](./ocp-alert-templates/README.md)
+
 [Public Overvis Cloud Platform (OCP) API](./ocp-api/README.md)
 
 [Overvis Connect Protocol V1 Specification](./overvis-connect/README.md)
+
