@@ -42,7 +42,7 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 ## <a name='Get-Organization-Networks-Devices-Parameters-Tree'></a> `GET /org/:orgId/nets/device-param-tree/` - Get Organization Networks-Devices-Parameters Tree
 [Back to top](#top)
 
-Returns full tree of networks, devices and all their parameters in organization.</p> <p>Tree is a multilevel dictionary with objects' unique system IDs as keys. First level is networks.</p> <p>Each object on each level contains user-specified name.</p> <p>Parameters contain two additional boolean fields:</p> <ul> <li>`is_tracked` - parameter is specified by user as 'tracked' (periodically reading on background).</li> <li>`is_programmable` - parameter value can be edited remotely on the device.</li> </ul>
+Returns full tree of networks, devices and all their parameters in organization.</p> <p>Tree is a multilevel dictionary with objects' unique system IDs as keys. First level is networks.</p> <p>Each object on each level contains user-specified name.</p> <p>Parameters contain three additional boolean fields:</p> <ul> <li>`address` - modbus parameter address.</li> <li>`is_tracked` - parameter is specified by user as 'tracked' (periodically reading on background).</li> <li>`is_programmable` - parameter value can be edited remotely on the device.</li> </ul>
 
 ```
 GET /org/:orgId/nets/device-param-tree/
@@ -67,17 +67,21 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 {
     "4": {
         "name": "Test EM Direct",
+        "solution": "standalone",
         "devices": {
             "4": {
                 "name": "EM",
+                "modbusUnitId": 111,
                 "parameters": {
                     "4": {
                         "name": "Time, min",
+                        "address": 100,
                         "isTracked": true,
                         "isProgrammable": true
                     },
                     "5": {
                         "name": "Some parameter description",
+                        "address": 101,
                         "isTracked": false,
                         "isProgrammable": true
                     }
@@ -87,17 +91,21 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
     },
     "5": {
         "name": "Test EM Direct 2",
+        "solution": "standalone",
         "devices": {
             "5": {
                 "name": "EM",
+                "modbusUnitId": 111,
                 "parameters": {
                     "6": {
                         "name": "Time, min",
+                        "address": 200,
                         "isTracked": true,
                         "isProgrammable": true
                     },
                     "7": {
                         "name": "Some parameter description",
+                        "address": 201,
                         "isTracked": false,
                         "isProgrammable": true
                     }
@@ -107,22 +115,27 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
     },
     "6": {
         "name": "Test readings",
+        "solution": "standalone",
         "devices": {
             "6": {
                 "name": "EM",
+                "modbusUnitId": 111,
                 "parameters": {
                     "8": {
                         "name": "Time, min",
+                        "address": 300,
                         "isTracked": true,
                         "isProgrammable": true
                     },
                     "9": {
                         "name": "Some parameter description",
+                        "address": 301,
                         "isTracked": false,
                         "isProgrammable": true
                     },
                     "10": {
                         "name": "Version",
+                        "address": 302,
                         "isTracked": true,
                         "isProgrammable": true
                     }

@@ -19,6 +19,7 @@ GET /params/read-realtime/
 |:---------|:-----------|:--------------------------------------|
 | `paramIds` | `String` | System IDs of parameters that should be read. |
 | `lang` | `String` | The language of the returned message, one of: `en`, `ru`, `pl`. Needed for representations of bit values (yes/no, on/off, etc.) |
+| `failbackToDb` | `Boolean` | Get value from the database if no real readings. |
 
 ### Examples
 
@@ -28,7 +29,7 @@ TOKEN=`curl -s -H "Content-Type: application/json" \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
-    "https://ocp.overvis.com/api/v1/params/read-realtime/?paramIds=547,545,537,546&lang=en" | \
+    "https://ocp.overvis.com/api/v1/params/read-realtime/?paramIds=547,545,537,546&lang=en&failbackToDb=true" | \
     jq -C
 ```
 
