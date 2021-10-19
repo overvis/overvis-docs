@@ -12,7 +12,7 @@ This set of documentation and tutorials will help you to start developing Overvi
 
 To be able to create Overvis visualizations using our tutorials, you will need the following:
 * You should already know how to connect your equipment to Overvis.
-* You will need some vector graphics editor that can export images as SVG. We will be using [Affinity Designer,](https://affinity.serif.com/en-us/designer/) but you can use any other free or paid editor: Inkscape, Adobe Illustrator, Sketch, etc. There is also [svg-edit](https://svg-edit.github.io/svgedit/dist/editor/index.html), the online editor that should fit any basic needs.
+* You will need some vector graphics editor that can export images as SVG. We will be using [Affinity Designer,](https://affinity.serif.com/en-us/designer/) but you can use any other free or paid editor: Inkscape, Adobe Illustrator, Sketch, etc. There is also [svg-edit](https://svgedit.netlify.app/editor/index.html), the online editor that should fit any basic needs.
 * You will also need a text editor that can work with SVG (XML) text (Notepad+, VisualStudio Code, Atom, Sublime Text, or any other).
 * We also assume that you know what SVG is. You can look at [SVG tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial) but you won't need any deep knowledge of this topic to create simple visualizations in Overvis.
 
