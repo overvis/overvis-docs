@@ -1,6 +1,6 @@
-# Simple timer-based relay control based on EM-486
+# Simple timer-based relay control using EM-486
 
-This program example switches the [EM-486](https://www.overvis.com/equipment/em-486/) relay on/off depending on time of day. At preset time it switches the relay OFF and ON. Required condition is that OFF time should be before (less than) ON time.
+This program example switches the [EM-486's](https://www.overvis.com/equipment/em-486/) relay on/off depending on time of day. At the specified times of the day it switches the relay OFF and ON. Required condition is that OFF-time should be before (less than) ON-time.
 
 The program is controlled through Overvis using registers on EM-481 device.
 
@@ -63,5 +63,5 @@ Address | Description
 # END.
 ```
 
-This program can easily be modified to control the [OB-215](https://www.overvis.com/equipment/ob-215/) relay with [EM-481](https://www.overvis.com/equipment/em-481/). In that case, parameter `P3` should be changed to relay value of OB-215 and ON/OFF actions (section `!ACTS`) should be changed to OB-215 control register modifications. See [astronomical timer example.](./astronomical-timer.md)
+This program can be modified to control the [OB-215](https://www.overvis.com/equipment/ob-215/) relay with [EM-481](https://www.overvis.com/equipment/em-481/). In that case, parameter `P3` should be changed to the relay register of OB-215 and ON/OFF actions (section `!ACTS`) should be changed to the OB-215 control register command. See [astronomical timer example.](./astronomical-timer.md)
 
