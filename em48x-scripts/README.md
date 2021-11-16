@@ -14,7 +14,7 @@ This language and its usage is described in details in the device's manuals (e.g
 
 This documentation contains several examples that provide you with the start point to write your own automation. We will update this list to include more examples.
 
-* [Simple timer-based relay control based on EM-486](./examples/simple-timer.md)
+* [Simple timer-based relay control using EM-486](./examples/simple-timer.md)
 * [Simple temperature control based on EM-486](./examples/simple-temperature-control.md)
 * [Astronomical timer or light sensor relay control for street lightning based on EM-481 + OB-215](./examples/astronomical-timer.md)
 
