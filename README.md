@@ -2,7 +2,7 @@
 
 Overvis is a system for monitoring and remote control of industrial equipment.
 
-http://www.overvis.com/
+https://www.overvis.com/
 
 ## Public documentation:
 
