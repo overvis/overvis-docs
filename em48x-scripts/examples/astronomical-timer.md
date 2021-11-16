@@ -40,7 +40,7 @@ Address | Description
 * PROTOCOLVERSION 5
 # By default - updating once per minute
 
-# This program assumes that OB-215 is connected on MODBUS ID 2 (see param 19).
+# This program assumes that OB-215 is connected on MODBUS ID 2 (see params 9 and 10, and section !ACTS).
 
 
 # In this section we assign numbers to device's parameters (registers).
