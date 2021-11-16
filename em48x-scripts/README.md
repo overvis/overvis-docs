@@ -1,4 +1,4 @@
-# EM-48X programing documentation
+# Novatek-Electro EM-48X Programing
 
 ![EM-481](./examples/imgs/em-481.jpg)
 
