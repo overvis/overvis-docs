@@ -89,3 +89,6 @@ All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845
 - [Device Parameter API](./Device_Parameter_API.md)
   - [`GET  /params/read-realtime/` - Read current value of the parameter from the device](./Device_Parameter_API.md#RealtimeReadParams)
   - [`POST /param/:paramId/write/` - Write parameter value to the device](./Device_Parameter_API.md#WriteParam)
+- [Visualization API](./Visualization_API.md)
+  - [`GET  /v1/vis/:visId/data/` - Get Visualization Data](./Visualization_API.md#GetVisualizationData)
+  - [`GET  /v1/vis/:visId/data/save/` - Save Visualization Data](./Visualization_API.md#SaveVisualizationData)
