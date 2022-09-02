@@ -2,7 +2,7 @@
 
 ![Diagram](imgs/astronomical-timer-diagram.svg)
 
-This example [EM-481](https://www.overvis.com/equipment/em-481/) program turns on/off the [OB-215](https://www.overvis.com/equipment/ob-215/) relay based on sunset/sunrise or light sensor connected to OB-215. 
+This example [EM-481](https://www.overvis.com/equipment/em-481/) program turns on/off the [OB-215](https://www.overvis.com/equipment/ob-215/) relay based on sunset/sunrise or light sensor connected to OB-215.
 
 It also includes additional energy saving interval (during night) when the relay should be switched off.
 
@@ -14,24 +14,24 @@ The program is controlled through Overvis using registers on EM-481 device.
 
 **Logic mode setting:**
 
-Address | Description
---------|------------
-5256    | Logic mode switch (1 = astronomical timer, 2 = sensor-based).
+| Address | Description                                                   |
+| ------- | ------------------------------------------------------------- |
+| 5256    | Logic mode switch (1 = astronomical timer, 2 = sensor-based). |
 
 **Astronomical timer mode settings:**
 
-Address | Description
---------|------------
-5250    | Shift in seconds **before** sunrise (to switch relay OFF).
-5251    | Shift in seconds **after** sunset (to switch relay ON).
-5252    | Time of day in seconds to force-switch relay OFF to enter energy saving period.
-5254    | Time of day in seconds to force-switch relay ON to exit energy saving period.
+| Address | Description                                                                     |
+| ------- | ------------------------------------------------------------------------------- |
+| 5250    | Shift in seconds **before** sunrise (to switch relay OFF).                      |
+| 5251    | Shift in seconds **after** sunset (to switch relay ON).                         |
+| 5252    | Time of day in seconds to force-switch relay OFF to enter energy saving period. |
+| 5254    | Time of day in seconds to force-switch relay ON to exit energy saving period.   |
 
 **Sensor-based mode settings:**
 
-Address | Description
---------|------------
-5257    | Sensor threshold: below this threshold relay will be switched OFF, above or  equal to threshold - ON.
+| Address | Description                                                                                          |
+| ------- | ---------------------------------------------------------------------------------------------------- |
+| 5257    | Sensor threshold: below this threshold relay will be switched OFF, above or equal to threshold - ON. |
 
 ## Code
 
@@ -60,7 +60,6 @@ Address | Description
 # In Overvis, this parameter can be changed through address 5251.
 4 * INT16 H 5501
 
-# ?
 # Additional energy saving mode: time in seconds after midnight to turn relay off.
 # E.g. to turn off at 01:00, set this to 3600.
 #      to turn off at 23:00, set this to 3600*23 = 82800.
@@ -150,7 +149,7 @@ Address | Description
 # The relay should be switched off in that case.
 8 AND C4 C7
 # C9: C2 || C8 = ((V0 >= V5) && (V0 <= V6)) || ((V8 > V7) && (V0 >= V7) && (V0 <= V8))
-# Either currently is daytime or we are in energy saving mode. 
+# Either currently is daytime or we are in energy saving mode.
 # In any case we have to turn relay off.
 9 OR C2 C8
 # С10: !C9 (Relay should be on)
@@ -170,7 +169,7 @@ Address | Description
 # The relay should be switched off in that case.
 13 AND C11 C12
 # C14: C2 || C13 = ((V0 >= V5) && (V0 <= V6)) || ((V8 <= V7) && ((V0 >= V7) || (V0 <= V8)))
-# Either currently is daytime or we are in energy saving mode. 
+# Either currently is daytime or we are in energy saving mode.
 # In any case we have to turn relay off.
 14 OR C2 C13
 # С15: !C10 (Relay should be on)
@@ -215,13 +214,13 @@ Address | Description
 # C27: C17 && C26 (We are in light sensor mode and current sensor reading is ERROR).
 27 AND C17 C26
 # C28: C23 || C27
-# We are in light sensor mode and 
+# We are in light sensor mode and
 #    current light level is less than threshold or reading is ERROR.
 28 OR C23 C27
 # C29: V11 != V12 (Current sensor reading is not ERROR).
 29 NOT C26
 # C30: C25 && C29
-# We are in light sensor mode and current light level is greater than threshold 
+# We are in light sensor mode and current light level is greater than threshold
 #     and current sensor reading is not ERROR.
 30 AND C25 C29
 
@@ -252,10 +251,10 @@ Address | Description
 # Turn relay ON if we are in astronomical timer mode and relay should be on.
 * C21 ACT A0
 
-# Turn relay ON if we are in light sensor mode and 
+# Turn relay ON if we are in light sensor mode and
 #    current light level is less than threshold or reading is ERROR.
 * C28 ACT A0
-# Turn relay OFF if we are in light sensor mode and 
+# Turn relay OFF if we are in light sensor mode and
 #    current light level is greater than threshold and reading is not ERROR.
 * C30 ACT A1
 
