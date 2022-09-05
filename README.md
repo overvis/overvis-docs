@@ -1,17 +1,20 @@
-# Overvis Public Documentation
+# Overvis Documentation
 
-Overvis is a system for monitoring and remote control of industrial equipment.
+Overvis ([www.overvis.com](https://www.overvis.com/)) is an industrial equipment monitoring and
+control system available as a cloud service or on-premise. We also provide communication equipment
+for simplifying the connection.
 
-[https://www.overvis.com/](https://www.overvis.com/)
+Here you can find the documentation for the Overvis products and related technologies.
 
-## Public documentation:
+## Cloud Software
 
-[Overvis Visualizations](./ocp-visualizations/README.md)
+- [Overvis Cloud Documentation](Overvis/)
 
-[Overvis Alert Templates](./ocp-alert-templates/README.md)
+## Equipment
 
-[Public Overvis Cloud Platform (OCP) API](./ocp-api/README.md)
+- [Overvis OPCB](OPCB/)
+- [Novatek-Electro EM-48X](EM/)
 
-[Overvis Connect Protocol V1 Specification](./overvis-connect/README.md)
+## Technologies
 
-[Novatek-Electro EM-48X Programming](./em48x-scripts/README.md)
+- [Overvis Connect Protocol](Overvis_Connect/)
