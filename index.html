@@ -14,31 +14,26 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-solarizedlight.min.css"
         />
-        <!-- <link
-            rel="stylesheet"
-            media="(prefers-color-scheme: dark)"
-            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
-        />
-        <link
-            rel="stylesheet"
-            media="(prefers-color-scheme: light)"
-            href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
-        /> -->
         <style>
             :root {
                 --base-font-size: 14px;
                 --sidebar-width: 20rem;
-                /* --theme-hue: 325; */
+                /* --link-color: #0074d9; */
+                --link-color: #1488b7;
+                --sidebar-nav-link-color: var(--link-color);
+            }
+            .sidebar > h1 img {
+                max-width: 100px;
+                margin-top: 3px;
             }
         </style>
-
-        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" /> -->
     </head>
     <body>
         <div id="app"></div>
         <script>
             window.$docsify = {
                 name: "Overvis Documentation",
+                logo: "/overvis-logo-dark.svg",
                 nameLink: {
                     "/": "#/",
                     "/ua/": "#/ua/",
@@ -46,7 +41,7 @@
                 },
                 repo: "https://github.com/overvis/overvis-docs",
                 relativePath: true,
-                themeColor: "#3191b0",
+                themeColor: "#1488b7",
                 loadSidebar: true,
                 subMaxLevel: 3,
                 loadNavbar: true,

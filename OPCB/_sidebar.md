@@ -1,17 +1,17 @@
 - [OPCB](/OPCB/)
-  - [User Documentation](/OPCB/User_Docs/)
+  - User Documentation
     - [Quick Start & Applications](/OPCB/User_Docs/Quick_Start/)
     - [OPCB-221 Operating Manual](/OPCB/User_Docs/OPCB-221_Manual/)
     - [OPCB-221B Operating Manual](/OPCB/User_Docs/OPCB-221B_Manual/)
-    - [Guides](/OPCB/User_Docs/Guides/)
+    - Guides
       - [Initial Setup](/OPCB/User_Docs/Guides/Initial_Setup.md)
       - [Web Interface](/OPCB/User_Docs/Guides/Web_Interface.md)
       - [Ethernet/Internet Connection](/OPCB/User_Docs/Guides/Ethernet_Internet_Connection.md)
       - [Cloud Server Connection](/OPCB/User_Docs/Guides/Cloud_Server_Connection.md)
   - [Releases & News](/OPCB/Releases/)
-  - [Programming Documentation](/OPCB/Programming_Docs/)
+  - Programming Documentation
     - [Modbus Operation Reference](/OPCB/Programming_Docs/Modbus.md)
     - [HTTP API Reference](/OPCB/Programming_Docs/API.md)
-  - [Developer Documentation](/OPCB/Developer_Docs/)
+  - Developer Documentation
     - [OPCB Runtime Installation](/OPCB/Developer_Docs/Runtime_Installation.md)
     - [Overvis Cloud Registration](/OPCB/Developer_Docs/Overvis_Cloud_Registration.md)
