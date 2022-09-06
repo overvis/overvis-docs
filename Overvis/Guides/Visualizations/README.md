@@ -44,7 +44,7 @@ Table of contents:
     - [Changing the color of an element depending on the parameter value](02-basic-example/03-bind-data/04-change-color/README.md)
     - [Adding a toggle control](02-basic-example/03-bind-data/05-toggle/README.md)
     - [Saving texts on the server](02-basic-example/03-bind-data/06-store-text/README.md)
-    - [Conclusion of the example](02-basic-example/03-bind-data/07-conclusion/README.md)
+  - [Conclusion of the example](02-basic-example/04-conclusion/README.md)
 - [HTML visualizations](03-html-example/README.md)
 - [Using JavaScript with Overvis API in visualizations](04-js-example/README.md)
 - [Integrating Google Maps](05-google-maps/README.md)

@@ -23,6 +23,6 @@ You can check the finished visualization code here:
 This example has demonstrated the basic features of Overvis visualizations that are commonly used
 among hundreds of dashboards that we created. With this knowledge, you can create any simple
 equipment state representation for yourself or your customers.
-[The next examples](../../../03-html-example/README.md) will introduce you to the more advanced
+[The next examples](../../03-html-example/README.md) will introduce you to the more advanced
 tricks. Or you can check the [reference document](/Overvis/References/Visualizations.md) and start
 creating your own dashboards.

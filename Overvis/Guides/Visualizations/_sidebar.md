@@ -10,7 +10,7 @@
       - [Changing the color](/Overvis/Guides/Visualizations/02-basic-example/03-bind-data/04-change-color/)
       - [Adding a toggle control](/Overvis/Guides/Visualizations/02-basic-example/03-bind-data/05-toggle/)
       - [Saving texts on the server](/Overvis/Guides/Visualizations/02-basic-example/03-bind-data/06-store-text/)
-      - [Conclusion of the example](/Overvis/Guides/Visualizations/02-basic-example/03-bind-data/07-conclusion/)
+    - [Conclusion of the example](/Overvis/Guides/Visualizations/02-basic-example/04-conclusion/)
   - [HTML visualizations](/Overvis/Guides/Visualizations/03-html-example/)
   - [Using JS in visualizations](/Overvis/Guides/Visualizations/04-js-example/)
   - [Integrating Google Maps](/Overvis/Guides/Visualizations/05-google-maps/)

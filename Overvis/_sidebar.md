@@ -8,10 +8,10 @@
     - [Visualizations](/Overvis/User_Docs/Connection/)
     - [Troubleshooting](/Overvis/User_Docs/Connection/)
     - [FAQ](/Overvis/User_Docs/Connection/)
-  - [Guides](/Overvis/Guides/)
+  - Guides
     - [Creating Visualizations](/Overvis/Guides/Visualizations/)
   - [News](/Overvis/News/)
-  - [References](/Overvis/References/)
+  - References
     - [API Reference](/Overvis/References/API/)
     - [Device Templates Reference](/Overvis/References/Device_Templates)
     - [Visualizations Reference](/Overvis/References/Visualizations)
