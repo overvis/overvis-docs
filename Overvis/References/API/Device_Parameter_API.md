@@ -1,5 +1,53 @@
 # Overvis API v1.0 :: Device Parameter API
 
+## <a name='Get-parameter-identifier-by-reference'></a> `POST /org/:orgId/params/get-id-by-reference/` - Get parameter identifier by reference
+
+This request take parameter reference string (https://docs.overvis.com/#/Overvis/References/Visualizations?id=device-parameters-can-be-referenced-in-one-of-the-following-ways) as argument ans returns ID of this parameter inside system.
+
+```
+POST /org/:orgId/params/get-id-by-reference/
+```
+*Required account permissions:* `operator`
+
+### Parameters - `Params`
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+| `orgId` | `Number` | System IDs of organization. |
+
+### Parameters - `Body`
+| Name     | Type       | Description                           |
+|:---------|:-----------|:--------------------------------------|
+| `emptyName` | `String` | Parameter reference string. |
+
+### Examples
+
+```bash
+TOKEN=`curl -s -H "Content-Type: application/json" \
+    -d '{"apiKey": "513cf747-eb5c-4d5f-931f-d22c9872c73c", "password": "DCdcSLmkoZkU5zGI9gpInDbo" }' \
+    "https://ocp.overvis.com/api/v1/authenticate/" | \
+        jq -r ".token"` && \
+curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
+    -d '"11-22-33-44-55-66>1>5000"' \
+    "https://ocp.overvis.com/api/v1/org/1/params/get-id-by-reference/" | \
+        jq -C
+```
+
+### Success response example
+
+```json
+551
+```
+
+### Error response example
+
+```json
+{
+    "errorCode": "ObjectNotFound",
+    "errorMessage": "Parameter not found."
+}
+```
+
+
 ## <a name='Read-current-value-of-the-parameter-from-the-device'></a> `GET /params/read-realtime/` - Read current value of the parameter from the device
 
 Performs reading from the device and returns values of the requested parameters.</p> <p>More than one value can be requested at a time. Results will be returned as a dictionary where key is a parameter ID. Returned values are automatically converted from Modbus registers (16 bit groups) to the actual parameter value number depending on the parameter type.</p> <p>If some parameter ID is not found, it will be ommited from the result.

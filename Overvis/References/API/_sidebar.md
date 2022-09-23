@@ -1,4 +1,4 @@
-- [Overvis API Reference](./)
+[Overvis API Reference](./README.md)
 
   - [Publicly Accessible API](./Publicly_Accessible_API.md)
   - [Authentication API](./Authentication_API.md)
@@ -8,4 +8,5 @@
   - [Readings API](./Readings_API.md)
   - [Alert API](./Alert_API.md)
   - [Device Parameter API](./Device_Parameter_API.md)
+  - [Raw Readings API](./Raw_Readings_API.md)
   - [Visualization API](./Visualization_API.md)
