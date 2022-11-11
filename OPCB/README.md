@@ -2,14 +2,14 @@
 
 Overvis OPCB is a series of communication controller devices:
 
-- [OPCB-221](./User_Docs/OPCB-221_Manual/)
-- [OPCB-221B](./User_Docs/OPCB-221B_Manual/)
+- [OPCB-221](./User_Docs/OPCB-221_Manual/README.md)
+- [OPCB-221B](./User_Docs/OPCB-221B_Manual/README.md)
 
 <!-- TODO: acquire links -->
 
 The main function of OPCB controllers is to connect MODBUS equipment with
-[Overvis cloud monitoring system](/Overvis/) or other SCADA systems. OPCB operates as a MODBUS
-RTU<>TCP converter.
+[Overvis cloud monitoring system](../OCP/README.md) or other SCADA systems. OPCB operates as a
+MODBUS RTU<>TCP converter.
 
 ![OPCB-221](./images/opcb-221.png)
 
