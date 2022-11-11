@@ -1,8 +1,6 @@
 # OPCB-221B Operating Manual
 
-<!-- TODO: correct picture -->
-
-![](./images/opcb-221-pre-exp.png)
+![](./images/opcb-221b.png)
 
 The Quality Management System of the device designing and production complies with the requirements
 of ISO 9001:2015.
@@ -307,9 +305,9 @@ allowed in the settings. By default, unconfigured OPCB-221B creates a Wi-Fi acce
 "OPCB_XXXXXX" (where XXXXXX are the last 6 characters of the device's MAC), for the initial setup
 as described in Appendix A.
 
-The soft reboot of the OPCB-221B can be performed through the web interface, by pressing the "Reboot
-device" button in the "Actions" section. This will finish all currently ongoing operations, store
-the data and reboot the device within 1 minute.
+The soft reboot of the OPCB-221B can be performed through the web interface, by pressing the
+"Reboot device" button in the "Actions" section. This will finish all currently ongoing operations,
+store the data and reboot the device within 1 minute.
 
 A hard reboot is performed by turning the power off, waiting 5 seconds, and then turning the power
 on again.
