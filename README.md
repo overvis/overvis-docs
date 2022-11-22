@@ -8,7 +8,7 @@ Here you can find the documentation for the Overvis products and related technol
 
 ## Cloud Software
 
-- [Overvis Cloud Documentation](Overvis/)
+- [Overvis Cloud Documentation](OCP/)
 
 ## Equipment
 

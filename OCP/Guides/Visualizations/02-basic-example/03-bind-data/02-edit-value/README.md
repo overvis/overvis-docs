@@ -36,7 +36,7 @@ Now clicking on the setpoint value opens the "Edit value" window:
 `on-click` attribute can do several other things, like sending a user to another visualization,
 increment the parameters, toggle the parameter between two values, etc. We will use some of these
 features later in the tutorial. For a full list, please see
-[the reference section.](/Overvis/References/Visualizations.md)
+[the reference section.](/OCP/References/Visualizations.md)
 
 As a final change, we have also added `cursor:pointer;` into the content of the `style` attribute.
 It just changes the mouse cursor to the "finger" pointer when a user hovers over the setpoint

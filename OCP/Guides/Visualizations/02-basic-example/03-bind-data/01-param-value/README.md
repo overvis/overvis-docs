@@ -35,7 +35,7 @@ should be read from the device on-line and not taken from the database of recent
 
 There are several ways to access networks/devices/parameters and also some additional options
 available for this attribute. You can find the list in the
-[reference section](/Overvis/References/Visualizations.md).
+[reference section](/OCP/References/Visualizations.md).
 
 We do similar code modifications for the rest of the fridge boxes. Afterward, we update the code of
 the visualization in Overvis to check the result:
