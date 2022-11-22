@@ -10,6 +10,7 @@
     - [FAQ](/OCP/User_Docs/Connection/)
   - Guides
     - [Creating Visualizations](/OCP/Guides/Visualizations/)
+    - [Resource Consumption Report](/OCP/Guides/Resource_Consumption_Report/)
   - [News](/OCP/News/)
   - References
     - [API Reference](/OCP/References/API/)
