@@ -1,82 +1,83 @@
-# Overvis OPCB Series Equipment
+# Обладнання Overvis серії OPCB
 
-Overvis OPCB is a series of communication controller devices:
+Overvis OPCB - це серія пристроїв контролерів зв'язку:
 
 - [OPCB-221B](./User_Docs/OPCB-221B_Manual/README.md)
 
 <!-- TODO: acquire links -->
 
-The main function of OPCB controllers is to connect MODBUS equipment with
-[Overvis cloud monitoring system](../OCP/README.md) or other SCADA systems. OPCB operates as a
-MODBUS RTU<>TCP converter.
+Основною функцією контролерів OPCB є з'єднання MODBUS обладнання з
+[Системою хмарного моніторингу Overvis](../OCP/README.md) або іншими SCADA-системами. OPCB працює
+як перетворювач MODBUS RTU<>TCP.
 
 ![OPCB-221](./images/opcb-221.png)
 
 <!-- TODO: photo -->
 
-OPCB is used to connect:
+OPCB використовується для підключення:
 
-- Refrigeration controllers
-- HVAC systems controllers
-- Agricultural smart devices
-- Power network relays, meters, and other electrical equipment
-- Industrial IoT devices
-- Industrial sensors and meters
-- Any other MODBUS-compatible electronics
+- Контролери охолодження
+- Контролери систем опалення, вентиляції та кондиціонування
+- Сільськогосподарські смарт-пристрої
+- Реле електромереж, лічильники та інше електрообладнання
+- Промислові IoT-пристрої
+- Промислові датчики та вимірювачі
+- Будь-яка інша електроніка з підтримкою MODBUS
 
 ![Operation diagram](./images/operation-diagram.svg)
 
 <!-- TODO: review diagram -->
 
-In conjunction with Overvis cloud monitoring, OPCB devices provide:
+У поєднанні з хмарним моніторингом Overvis пристрої OPCB забезпечують:
 
-**Data collection:**
+**Збір даних:**
 
-- Gather operational data points (any numeric values) from your equipment.
-- Store history of operational data, and get insights and analytics.
-- Collected data is fully exportable (Excel, CSV).
-- Hazard Analysis Critical Control Point (HACCP) reporting.
+- Зберіть робочі дані (будь-які числові значення) з вашого обладнання.
+- Зберігайте історію операційних даних, отримуйте інсайти та аналітику.
+- Зібрані дані можна повністю експортувати (Excel, CSV).
+- Звітність з аналізу ризиків та критичних контрольних точок (HACCP).
 
-**SMS and email notifications:**
+**Сповіщення через SMS та електронну пошту:**
 
-- Configure alarms for operational parameter thresholds or connection errors.
-- Set up a “chain of responsibility” requiring alarm confirmations from personnel and escalating
-  them in the absence of response.
-- All alarm actions are logged and ready for review.
+- Налаштуйте сповіщення про перевищення порогових значень робочих параметрів або помилки з'єднання.
+- Створіть "ланцюжок відповідальності", що вимагає підтвердження сигналів в разі аварій від
+  персоналу та їх ескалації у разі відсутності реакції.
+- Усі повідомлення про аварійні ситуації реєструються та доступні для перегляду.
 
-**Real-time monitoring and control:**
+**Усі повідомлення про аварійні ситуації реєструються та доступні для перегляду:**
 
-- Create dashboards with real-time information received from the equipment.
-- Visualize the data using open SVG format.
-- Use Google Maps API to display objects’ locations.
-- Use JavaScript and Overvis API to set up quick action controls for operation personnel.
+- Створення панелей керування з інформацією, отриманою від обладнання в реальному часі.
+- Візуалізація даних у відкритому форматі SVG.
+- Використовуйте Google Maps API для відображення розташування об'єктів.
+- Використовуйте JavaScript та Overvis API для налаштування елементів керування швидкими діями для
+  операційного персоналу.
 
-**And more:**
+**І навіть більше:**
 
-- Use templates to quickly create devices and alarms.
-- Manage access levels for different accounts inside one organization.
-- Works with dynamic IPs and bypasses firewalls.
-- Optimized mobile access.
-- Industry-standard encryption.
-- Overvis API allows the automation of control and can be used to load data into other management
-  systems.
+- Використовуйте шаблони для швидкого створення пристроїв і систем сповіщення.
+- Керуйте рівнями доступу для різних облікових записів в межах однієї організації.
+- Працює з динамічними IP-адресами та обходить брандмауери.
+- Оптимізація мобільного доступу.
+- Шифрування за промисловим стандартом.
+- Overvis API дозволяє автоматизувати управління і може використовуватися для завантаження даних в
+  інші системи управління.
 
 ![Overvis distributed objects monitoring visualization example.](./images/overvis-display.jpeg)
 
-## Feature list
+## Перелік функцій
 
-- MODBUS RTU/TCP converter.
-- Built-in Overvis cloud support (www.overvis.com).
-- Serving as TCP server or client, MODBUS RTU master or slave.
-- RS-485 network extension.
-- MODBUS ASCII mode support.
-- Supporting LAN and/or Wi-Fi connection.
-- Optional 3G/LTE connection using an external USB modem.
-- Wi-Fi Access Point mode.
-- Web interface, accessible from the local network or via WiFi Access Point.
-- Remote configuration (using MODBUS or web interface).
-- RS-485 network settings: baud rate, parity, response timeout.
-- Multiple RS-485 networks support.
-- MODBUS requests debugging tools.
-- Automatic or manual firmware update.
+- Перетворювач MODBUS RTU/TCP.
+- Вбудована підтримка хмарного сервісу Overvis (www.overvis.com).
+- Робота в якості TCP-сервера або клієнта, ведучого або веденого пристрою MODBUS RTU.
+- Розширення мережі RS-485.
+- Підтримка режиму MODBUS ASCII.
+- Підтримка з'єднання LAN та/або Wi-Fi.
+- Додаткове підключення 3G/LTE за допомогою зовнішнього USB-модему.
+- Режим точки доступу Wi-Fi.
+- Веб-інтерфейс, доступний з локальної мережі або через точку доступу WiFi.
+- Віддалена конфігурація (за допомогою MODBUS або веб-інтерфейсу).
+- Налаштування мережі RS-485: швидкість передачі, парність, таймаут відповіді.
+- Підтримка декількох мереж RS-485.
+- MODBUS запитує інструменти налаштування.
+- Автоматичне або ручне оновлення прошивки.
 - HTTP API.

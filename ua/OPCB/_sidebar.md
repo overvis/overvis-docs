@@ -1,10 +1,10 @@
 - [OPCB](/ua/OPCB/)
-  - User Documentation
-    - [Quick Start & Applications](/ua/OPCB/User_Docs/Quick_Start/)
-    - [OPCB-221B Operating Manual](/ua/OPCB/User_Docs/OPCB-221B_Manual/)
-    - Guides
-      - [Initial Setup](/ua/OPCB/User_Docs/Guides/Initial_Setup.md)
-      - [Web Interface](/ua/OPCB/User_Docs/Guides/Web_Interface.md)
-      - [Ethernet/Internet Connection](/ua/OPCB/User_Docs/Guides/Ethernet_Internet_Connection.md)
-      - [Cloud Server Connection](/ua/OPCB/User_Docs/Guides/Cloud_Server_Connection.md)
-      - [Memory Card Flashing](/ua/OPCB/User_Docs/Guides/Memory_Card_Flashing.md)
+  - Документація для користувачів
+    - [Швидкий старт та додатки](/ua/OPCB/User_Docs/Quick_Start/)
+    - [Керівництво з експлуатації OPCB-221B](/ua/OPCB/User_Docs/OPCB-221B_Manual/)
+    - Посібники
+      - [Початкове налаштування](/ua/OPCB/User_Docs/Guides/Initial_Setup.md)
+      - [Веб-інтерфейс](/ua/OPCB/User_Docs/Guides/Web_Interface.md)
+      - [Підключення до мережі Ethernet/Інтернет](/ua/OPCB/User_Docs/Guides/Ethernet_Internet_Connection.md)
+      - [Підключення до хмарного сервера](/ua/OPCB/User_Docs/Guides/Cloud_Server_Connection.md)
+      - [Прошивка карти пам'яті](/ua/OPCB/User_Docs/Guides/Memory_Card_Flashing.md)

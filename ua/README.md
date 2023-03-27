@@ -1,11 +1,11 @@
-# Overvis Documentation
+# Документація Overvis
 
-Overvis ([www.overvis.com](https://www.overvis.com/)) is an industrial equipment monitoring and
-control system available as a cloud service or on-premise. We also provide communication equipment
-for simplifying the connection process.
+Overvis ([www.overvis.com](https://www.overvis.com/)) - це система моніторингу та управління
+промисловим обладнанням, доступна як хмарний сервіс або локально. Ми також надаємо комунікаційне
+обладнання для спрощення процесу підключення.
 
-Here you can find the documentation for the Overvis products and related technologies.
+Тут ви можете знайти документацію для продуктів Overvis і пов'язаних з ними технологій.
 
-## Equipment
+## Обладнання
 
 - [Overvis OPCB](OPCB/)

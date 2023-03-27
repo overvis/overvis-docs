@@ -1,243 +1,248 @@
-# OPCB-221 Applications
+# Застосування OPCB-221
 
-## 1. Modbus RTU/ASCII to Modbus TCP converter
+## 1. Конвертер Modbus RTU/ASCII в Modbus TCP
 
-- Local access.
-- Remote access via internet.
+- Локальний доступ до мережі.
+- Віддалений доступ через Інтернет.
 
-![Diagram of using the OPCB-221 as a Modbus RTU/ASCII to Modbus TCP converter](./images/opcb.control.flow.1.png)
+![Схема використання OPCB-221 як перетворювача Modbus RTU/ASCII в Modbus TCP](./images/opcb.control.flow.1.png)
 
-This variant is usually specified with:
+Цей варіант зазвичай задається за допомогою:
 
-- 1...2 RS-485 ports enabled in Master mode;
-- Modbus TCP server enabled;
-- Modbus TCP clients turned off.
+- 1...2 Порти RS-485 увімкнено в режимі Master;
+- Ввімкнено сервер Modbus TCP;
+- Клієнти Modbus TCP вимкнено.
 
-The RS-485 port or ports are configured for communication with the connected devices (speed and
-byte format, i.e. parity and number of stop bits are specified). The gateway for RS-485 is
-configured for the desired Modbus address ranges.
+Порт або порти RS-485 налаштовані для зв'язку з підключеними пристроями (задано швидкість і формат
+байта, тобто вказано парність та кількість стоп-біт). Шлюз для RS-485 налаштований на потрібні
+діапазони адреси Modbus.
 
-## 2. Converter for remote access to Modbus TCP via Internet
+## 2. Конвертер для віддаленого доступу до Modbus TCP через Інтернет
 
-![OPCB-221 application diagram as a converter for remote Modbus TCP access via the Internet](./images/opcb.control.flow.2.png)
+![Схема застосування OPCB-221 як перетворювача для віддаленого доступу до Modbus TCP через Інтернет](./images/opcb.control.flow.2.png)
 
-This option is usually specified with:
+Цей параметр зазвичай вказується за допомогою:
 
-- OPCB-221 access to the Internet;
-- 1...2 Modbus TCP clients enabled;
-- Modbus TCP server enabled;
-- disabled RS-485.
+- OPCB-221 доступ до мережі Інтернет;
+- 1...2 Клієнти Modbus TCP увімкнено;
+- Сервер Modbus TCP увімкнено;
+- вимкнено RS-485.
 
-The Modbus TCP clients are configured to communicate with the desired remote servers or devices (IP
-addresses are specified). The gateway for Modbus TCP clients is configured to the desired Modbus
-address ranges.
+Клієнти Modbus TCP налаштовані на зв'язок з потрібними віддаленими серверами або пристроями (IP
+адреси вказано). Шлюз для клієнтів Modbus TCP налаштовано на потрібні діапазони адреси Modbus.
 
-## 3. Converter for remote access via a cloud server
+## 3. Конвертер для віддаленого доступу через хмарний сервер
 
-![OPCB-221 application diagram as a converter for remote access via a cloud server](./images/opcb.control.flow.3.png)
+![Схема застосування OPCB-221 як перетворювача для віддаленого доступу через хмарний сервер](./images/opcb.control.flow.3.png)
 
-The variant is most often a cloud variant of any of the other modes, or a combination of them.
-However, when accessed exclusively through a cloud server, other ports for local control devices
-(such as a Modbus TCP server) are most often disabled. The option is used under the following
-conditions:
+Найчастіше це хмарний варіант будь-якого з інших режимів або їх комбінація. Однак при доступі
+виключно через хмарний сервер інші порти для локальних пристроїв керування (наприклад, сервер
+Modbus TCP) найчастіше відключені. Опція використовується за таких умовах:
 
-- The OPCB-221 has access to the Internet;
-- reverse (device-to-server) connection to the cloud server is enabled.
+- OPCB-221 має доступ до мережі Інтернет;
+- увімкнено зворотне (пристрій-сервер) з'єднання з хмарним сервером.
 
-To access OPCB-221 via the cloud server, you just need to provide access OPCB-221 to the Internet
-and make sure that the address of the desired server is specified in the settings.
+Для доступу до OPCB-221 через хмарний сервер достатньо забезпечити доступ OPCB-221 до мережі
+Інтернет і переконатися, що в налаштуваннях вказано адресу потрібного сервера.
 
-It is not recommended to disable the reverse (device-to-server) connection, even if remote user
-access is not required at this time.
+Не рекомендується відключати зворотне з'єднання (пристрій-сервер), навіть якщо віддалений доступ
+користувача на даний момент не потрібен.
 
-## 4. Modbus TCP to Modbus RTU/ASCII converter
+## 4. Конвертер Modbus TCP в Modbus RTU/ASCII
 
-- connection of Modbus TCP devices to a master that has an RS-485 interface
-- extension, extension or synchronization of the RS-485 by means of converter(s) OPCB-221
+- підключення пристроїв Modbus TCP до ведучого пристрою, що має інтерфейс RS-485
+- розширення, доповнення або синхронізація RS-485 за допомогою перетворювача(ів) OPCB-221
 
-![Diagram of using the OPCB-221 as a Modbus TCP to Modbus RTU/ASCII converter](./images/opcb.control.flow.4.png)
+![Схема використання OPCB-221 як перетворювача Modbus TCP в Modbus RTU/ASCII](./images/opcb.control.flow.4.png)
 
-This variant is usually specified with:
+Цей варіант зазвичай задається за допомогою:
 
-- 1...2 RS-485 ports enabled in Slave mode;
-- 1...2 Modbus TCP clients enabled;
-- Modbus TCP server turned off;
-- disabled RS-485.
+- 1...2 Порти RS-485 увімкнено в режимі Slave;
+- 1...2 Клієнти Modbus TCP увімкнено;
+- Сервер Modbus TCP вимкнено;
+- вимкнено RS-485.
 
-The RS-485 port or ports are configured for communication with the connected master device or
-devices connected (the speed and byte format, i.e. parity and number of stop bit). Modbus TCP
-clients are configured to communicate with the desired remote servers or devices (IP addresses are
-specified). Gateway for Modbus TCP clients is configured to the desired Modbus address ranges.
+Порт або порти RS-485 налаштовані для зв'язку з підключеним головним пристроєм або підключеними
+пристроями (швидкість і формат байта, тобто парність і кількість стоп-біт). Modbus TCP клієнти
+налаштовані на зв'язок з потрібними віддаленими серверами або пристроями (вказані IP-адреси). Шлюз
+для клієнтів Modbus TCP налаштовано на бажані діапазони адреси Modbus.
 
-## Combinations
+## Поєднання (комбінації)
 
-![OPCB-221 all combinations diagram](./images/opcb.control.flow.5.png)
+![OPCB-221 діаграма всіх комбінацій](./images/opcb.control.flow.5.png)
 
-The number of combined variants is quite large, basically they contain different parts of the
-already listed variants.
+Кількість комбінованих варіантів досить велика, в основному вони містять різні частини вже
+перерахованих варіантів.
 
-For example:
+Наприклад:
 
-- one RS-485 can be configured as either Master or Slave, but not both both at the same time.
-  Accordingly, depending on this, either the slaves devices from variant 1, or control devices from
-  variant 2 may or may not present or absent in either mode;
-- the same applies to the second RS-485, which is independent of the first. Therefore, a
-  combination of Master and Slave (a mixture of variants 1 and 4) is acceptable;
-- Modbus TCP devices (from variants 2 and 4) can be present or not TCP devices (variants 2 and 4)
-  can be present or absent in any of the modes, depending on the settings of the Modbus TCP;
-- Modbus TCP control devices (of variants 1 and 2) may or may not be present in any mode, depending
-  on the settings of the Modbus TCP Modbus TCP control devices (variants 1 and 2) may or may not be
-  present in any of the modes depending on the local Modbus TCP Modbus TCP server settings;
-- cloud server (from option 3) may or may not be present in any of modes, depending on the settings
-  of the return connection.
+- один RS-485 може бути сконфігурований як ведучий або підлеглий, але не як ведучий і підлеглий
+  одночасно. Відповідно, залежно від цього, або підлеглі пристрої з варіанту 1, або керуючі
+  пристрої з варіанту 2 можуть бути наявні або відсутні в обох режимах, а можуть бути відсутніми;
+- Те саме стосується і другого RS-485, який не залежить від першого. Тому допустима комбінація
+  Master і Slave (суміш варіантів 1 і 4) є прийнятною;
+- Пристрої Modbus TCP (з варіантів 2 і 4) можуть бути наявними або відсутніми у будь-якому з
+  режимів, залежно від налаштувань Modbus TCP;
+- Пристрої керування Modbus TCP (варіанти 1 і 2) можуть бути наявними або відсутніми в будь-якому
+  режимі, залежно від від налаштувань Modbus TCP. Пристрої керування Modbus TCP (варіантів 1 і 2)
+  можуть бути наявними, а можуть бути відсутніми в будь-якому з режимів, залежно від налаштувань
+  локального сервера Modbus TCP Modbus TCP;
+- хмарний сервер (з варіанту 3) може бути наявним, а може бути відсутнім в будь-якому з режимів, в
+  залежності від налаштувань зворотного з'єднання.
 
-# Quick start
+# Швидкий запуск
 
-## Wiring the OPCB-221
+## Підключення OPCB-221 до мережі
 
-1. prepare RS485 bus, LAN / Wi-Fi router connected to Internet;
+1. підготувати шину RS485, LAN / Wi-Fi роутер, підключений до Інтернету;
 
-![prepared items](./images/start11.png) ![](./images/Wiring_the_OPCB-221_1.svg)
+![підготовлені елементи](./images/start11.png) ![](./images/Wiring_the_OPCB-221_1.svg)
 
-2. unpack OPCB-221;
+2. розпакуйте OPCB-221;
 
-![package contents](./images/start12.png) ![](./images/Wiring_the_OPCB-221_2.svg)
+![вміст упаковки](./images/start12.png) ![](./images/Wiring_the_OPCB-221_2.svg)
 
-- compare OPCB-221 package contents with the manual inside, and ensure there are no traces of
-  damage to any of the items;
-- **compare the power unit characteristics with the local mains**;
-- keep the device in the target environment for 2 hours (at least) before powering it;
+- порівняти вміст упаковки OPCB-221 з інструкцією, що знаходиться всередині, і переконатися у
+  відсутності слідів пошкоджень на будь-якому з елементів;
+- **порівняти характеристики блоку живлення з характеристиками місцевої електромережі**;
+- витримайте пристрій у цільовому середовищі протягом 2 годин (щонайменше) перед увімкненням;
 
-3. Memory card is factory pre-installed into the OPCB-221 `Memory` slot;
+3. Карта пам'яті попередньо встановлена на заводі в слот "Пам'ять" OPCB-221;
 
-![memory card](./images/start13.png) ![](./images/Wiring_the_OPCB-221_3.svg)
+![карта пам'яті](./images/start13.png) ![](./images/Wiring_the_OPCB-221_3.svg)
 
-4. connect RS-485 bus to RS485-to-USB convertor module (included);
+4. підключіть шину RS-485 до модуля перетворювача RS485 на USB (входить до комплекту);
 
-![RS-485 bus](./images/start14.png) ![](./images/Wiring_the_OPCB-221_4.svg)
+![Шина RS-485](./images/start14.png) ![](./images/Wiring_the_OPCB-221_4.svg)
 
-- note the direct signal contact `A`/`A+`/`D+` and inverted signal contact `B`/`B-`/`D-`
-  connection, the bus shield (if any) should be grounded at a single point close to the terminal;
-- if the module is the last (or the first) connection on the bus line, consider adding a 120Ohm
-  0,25W termination resistor in parallel to improve performance for high-speed or long lines;
+- зверніть увагу на контакт прямого сигналу `A`/`A+`/`D+` та контакт інверсного сигналу
+  `B`/`B-`/`D-` екран шини (за наявності) повинен бути заземлений в одній точці поблизу клеми;
+- якщо модуль є останнім (або першим) з'єднанням на шині, розгляньте можливість додавання
+  оконечного резистора 120 Ом 0,25 Вт паралельно, щоб покращити продуктивність для високошвидкісних
+  або довгих ліній;
 
-5. connect other Modbus controllable devices to RS-485 bus;
+5. підключіть до шини RS-485 інші пристрої, керовані Modbus;
 
-![other RS-485 devices](./images/start15.png) ![](./images/Wiring_the_OPCB-221_5.svg)
+![інші RS-485 пристрої](./images/start15.png) ![](./images/Wiring_the_OPCB-221_5.svg)
 
-- the number of the devices sharing the same bus (without RS-485 repeater device insertion, not
-  included) is limited by their receiver current consumption, usually at least 32 devices with 1mA
-  consumption can be connected (more if their consumption is less than 1mA);
-- each device should be added on either of the two ends of the bus (instead of the termination
-  resistor), avoiding junctions and branches;
-- the direct and inverted contacts should be connected accordingly, otherwise some or all of the
-  bus devices would be inaccessible;
-- if the bus contacts order is unknown for a custom device, it is safe to test it later (by trying
-  it the both ways);
-- the bus shield part between any two devices should be grounded separately instead of connecting
-  it to the other shield parts;
-- consider adding a 120Ohm 0,25W termination resistor in parallel to the terminal contacts of the
-  uttermost device (that is, two resistors on the both ends of the RS-485 bus) to improve
-  performance for high-speed or long lines;
+- кількість пристроїв, що розділяють одну шину (без вставки пристрою повторювача RS-485, що не
+  входить до комплекту), обмежена споживанням приймача до 32 мА. обмежена струмом споживання їх
+  приймачів, зазвичай не менше 32 пристроїв зі споживанням 1 мА можна підключити (більше, якщо їхнє
+  споживання менше 1 мА);
+- кожен пристрій повинен бути доданий на будь-якому з двох кінців шини (замість кінцевого
+  резистора), уникаючи з'єднань і розгалужень;
+- прямі та інвертовані контакти повинні бути з'єднані відповідно, інакше деякі або всі пристрої
+  шини будуть недоступні;
+- якщо порядок контактів шини невідомий для кастомного пристрою, можна протестувати його пізніше
+  (спробувавши в обох напрямках);
+- частина екрану шини між будь-якими двома пристроями повинна бути заземлена окремо, а не з'єднана
+  з іншими частинами до інших частин екрану;
+- розгляньте можливість додавання кінцевого резистора 120 Ом 0,25 Вт паралельно до клемних
+  контактів крайнього пристрою (тобто два резистори на обох кінцях шини RS-485), щоб покращити
+  продуктивність для високошвидкісних або довгих ліній;
 
-6. connect RS-485-to-USB convertor module to OPCB-221;
+6. підключіть модуль перетворювача RS-485 в USB до OPCB-221;
 
-![RS-485-to-USB module](./images/start16.png) ![](./images/Wiring_the_OPCB-221_6.svg)
+![Модуль RS-485 до USB](./images/start16.png) ![](./images/Wiring_the_OPCB-221_6.svg)
 
-- any of the OPCB-221 USB jacks marked `Ext.` can be used;
-- consider fixing the module in place with the zip ties (included) to avoid accidental
-  disconnection;
+- можна використовувати будь-який з USB-роз'ємів OPCB-221 з позначкою `Ext.`.;
+- щоб уникнути випадкового від'єднання, зафіксуйте модуль на місці за допомогою стяжок (входять до
+  комплекту);
 
-7. optional: if using Ethernet instead of Wi-Fi, connect OPCB-221 to the router with the LAN cable
-   (included);
+7. додатково: якщо ви використовуєте Ethernet замість Wi-Fi, підключіть OPCB-221 до роутера за
+   допомогою LAN-кабелю (у комплекті);
 
-![Ethernet cable](./images/start17.png) ![](./images/Wiring_the_OPCB-221_7.svg)
+![Кабель Ethernet](./images/start17.png) ![](./images/Wiring_the_OPCB-221_7.svg)
 
-- do not connect to the router jack `WAN`/`Internet`, but use the conventional `LAN` jack instead;
+- не підключайте до роутера роз'єм `WAN`/`Internet`, а використовуйте звичайний роз'єм `LAN`
+  замість нього;
 
-8. connect power unit (included) to OPCB-221 `Power` jack;
+8. підключіть блок живлення (входить до комплекту) до роз'єму OPCB-221 `Power`.;
 
-![power unit](./images/start18.png) ![](./images/Wiring_the_OPCB-221_8.svg)
+![блок живлення](./images/start18.png) ![](./images/Wiring_the_OPCB-221_8.svg)
 
-9. connect power unit to the mains, power on OPCB-221 and other RS-485 bus devices.
+9. підключити блок живлення до електромережі, увімкнути OPCB-221 та інші пристрої на шині RS-485.
 
-![power on](./images/start19.png) ![](./images/Wiring_the_OPCB-221_9.svg)
+![ввімкнення живлення](./images/start19.png) ![](./images/Wiring_the_OPCB-221_9.svg)
 
-- **ensure the mains connection is portected (with the 1A current limiter)**;
+- **переконайтеся, що підключення до електромережі захищене (за допомогою обмежувача струму 1А)**;
 
-## Getting OPCB-221 to Internet
+## Підключення OPCB-221 до мережі Інтернет
 
-1. use your telephone or another Wi-Fi smart device to scan for access point `OPCB_XXXXXX` to
-   appear (where XXXXXX are the last 6 digits in the labelled device MAC address, the startup can
-   take up to 1 minute);
+1. за допомогою телефону або іншого смарт-пристрою з підтримкою Wi-Fi проскануйте точку доступу
+   `OPCB_XXXXXX`, (де XXXXXX - це останні 6 цифр у маркованій MAC-адресі пристрою, запуск може може
+   зайняти до 1 хвилини);
 
-![OPCB access point in list](./images/start21.png)
+![Точка доступу до OPCB у списку](./images/start21.png)
 
-2. connect to the access point;
+2. підключіться до точки доступу;
 
-![OPCB access point connected](./images/start22.png)
+![Точку доступу OPCB підключено](./images/start22.png)
 
-- the default password is `12345678`;
+- пароль за замовчуванням: `12345678`.;
 
-3. follow the `setup.overvis.com` link to open OPCB-221 setup page;
+3. перейдіть за посиланням `setup.overvis.com`, щоб відкрити сторінку налаштування OPCB-221;
 
-![OPCB page](./images/start23.png)
+![Сторінка OPCB](./images/start23.png)
 
-- if the warning page opens with misdirection explanation, try disconnecting your smart device from
-  the Internet first;
-- the direct address `192.168.4.1` can also be used to avoid misdirections;
+- якщо відкривається сторінка попередження з поясненням помилкового напрямку, спробуйте спочатку
+  від'єднати ваш смарт-пристрій;
+- також можна використовувати пряму адресу `192.168.4.1`, щоб уникнути помилкових перенаправлень;
 
-4. setup OPCB-221 network interfaces to match your router configuration;
+4. налаштуйте мережеві інтерфейси OPCB-221 відповідно до конфігурації вашого маршрутизатора;
 
-![OPCB Wi-Fi setup page](./images/start24.png)
+![Сторінка налаштування Wi-Fi OPCB](./images/start24.png)
 
-- use ELAN (Ethernet) or WLAN (Wi-Fi) interface page, or both;
-- to use Wi-Fi, switch off access point mode;
-- save the settings after completing each page;
-- contact your local network administrator to determine the interfaces correct configuration;
+- використовуйте сторінку інтерфейсу ELAN (Ethernet) або WLAN (Wi-Fi), або обидві;
+- щоб користуватися Wi-Fi, вимкніть режим точки доступу;
+- зберігати налаштування після завершення кожної сторінки;
+- зверніться до адміністратора локальної мережі для визначення правильної конфігурації інтерфейсів;
 
-5. optional: setup RS485 for baudrate and exchange format of the RS485 bus (this can be done
-   later);
+5. додатково: налаштування швидкості передачі даних та формату обміну по шині RS485 (можна зробити
+   пізніше);
 
-![OPCB RS-485 setup page](./images/start25.png)
+![Сторінка налаштування OPCB RS-485](./images/start25.png)
 
-- all the bus devices should share the same baudrate and format;
-- save the settings after completing each page;
+- всі пристрої шини повинні мати однакову швидкість передачі та формат;
+- зберігати налаштування після завершення кожної сторінки;
 
-6. reset OPCB-221 for the changes to take effect.
+6. перезавантажити OPCB-221, щоб зміни набули чинності.
 
-![OPCB reboot prompt](./images/start26.png)
+![Підказка про перезавантаження OPCB](./images/start26.png)
 
-## Using Overvis to access OPCB-221
+## Використання Overvis для доступу до OPCB-221
 
-1. follow the labelled link to get to the cloud server;
+1. перейдіть за маркованим посиланням, щоб потрапити на хмарний сервер;
 
-- scan the labeled QR code to follow the link;
-- or open the browser on your smart device, then type in the link printed on the label;
+- відскануйте позначений QR-код, щоб перейти за посиланням;
+- або відкрийте браузер на своєму смарт-пристрої та введіть посилання, надруковане на етикетці;
 
-2. if not logged in, authorize at the cloud server;
+2. якщо ви не ввійшли в систему, авторизуйтесь на хмарному сервері;
 
-![Overvis authorization](./images/start32.png)
+![Авторизація в Overvis](./images/start32.png)
 
-- if password forgotten, restore your password by email with an option at the server login page;
-- if no account yet, register a new account with an option at the server login page;
+- якщо ви забули пароль, відновіть його електронною поштою з відповідною опцією на сторінці входу
+  на сервер;
+- якщо у вас ще немає облікового запису, зареєструйте новий обліковий запис з відповідною опцією на
+  сторінці входу на сервер;
 
-3. on a new Modbus network settings page, type in the new network name in the "Name" field;
+3. на новій сторінці налаштувань мережі Modbus введіть нову назву мережі в полі "Назва";
 
-![Overvis new Modbus network configuration](./images/start33.png)
+![Перегляд нової конфігурації мережі Modbus](./images/start33.png)
 
-- ensure the connection is established, and the device version is displayed at the top of the
-  Modbus network settings page;
+- переконайтеся, що з'єднання встановлено, а версія пристрою відображається у верхній частині
+  сторінки налаштувань мережі Modbus;
 
-4. optional: add devices connected to the OPCB-221 (via Modbus RTU/ASCII or Modbus TCP) to the
-   "Connected devices" list (this can be done later);
+4. за бажанням: додайте пристрої, підключені до OPCB-221 (через Modbus RTU/ASCII або Modbus TCP),
+   до списку "Підключені пристрої" (це можна зробити пізніше);
 
-5. press the "Install" button;
+5. натисніть кнопку "Встановити";
 
-6. finally test the connection by pressing any OPCB-221 parameter value in the table below;
+6. на завершення протестуйте з'єднання, натиснувши будь-яке значення параметра OPCB-221 в таблиці
+   нижче;
 
-![Overvis test parameter readout](./images/start36.png)
+![Зчитування тестових параметрів Overvis](./images/start36.png)
 
-- `...` is displayed in the values column if no value is known yet, otherwise a value (e.g. a
-  number) is displayed;
-- the value would then update continuously (until it is pressed again).
+- `...` відображається у стовпчику значень, якщо значення ще не відоме, інакше значення (наприклад
+  число) виводиться;
+- значення буде оновлюватися безперервно (до повторного натискання).
