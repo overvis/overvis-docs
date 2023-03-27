@@ -8,6 +8,7 @@
       - [Web Interface](/OPCB/User_Docs/Guides/Web_Interface.md)
       - [Ethernet/Internet Connection](/OPCB/User_Docs/Guides/Ethernet_Internet_Connection.md)
       - [Cloud Server Connection](/OPCB/User_Docs/Guides/Cloud_Server_Connection.md)
+      - [Memory Card Flashing](/OPCB/User_Docs/Guides/Memory_Card_Flashing.md)
   - [Releases & News](/OPCB/Releases/)
   - Programming Documentation
     - [Modbus Operation Reference](/OPCB/Programming_Docs/Modbus.md)

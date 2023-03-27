@@ -77,11 +77,13 @@ of ASCII characters;
 
 ## Complete set
 
-<!-- TODO: picture -->
+<!-- TODO: update the RS-485 stick looks or comment on varying set -->
 
 ![](./images/Wiring_the_OPCB-221B_2_Product_set.svg)
 
 **Table 1** – Product set
+
+<!-- TODO: is power supply with an attached DC Plug cable ? consider redrawing it also -->
 
 | Name                                                                                             | Quantity (pcs.) |
 | ------------------------------------------------------------------------------------------------ | --------------- |
@@ -94,6 +96,8 @@ of ASCII characters;
 ## Overall mounting dimensions and controls
 
 ![](./images/OPCB-221B_For_Read_me1.svg)
+
+<!-- TODO: item 4 should be DC Plug, not HDMI, other numerations chnage to total 7 items -->
 
 ![](./images/OPCB-221B_For_Read_me2.svg)
 
@@ -134,7 +138,7 @@ TODO: Fill in the table with the correct parameters of the motherboard
 
 | Name                                                                                            | Value                                  |
 | :---------------------------------------------------------------------------------------------- | -------------------------------------- |
-| Power supply voltage DC, V                                                                      | 5                                      |
+| Power supply voltage DC, V                                                                      | 5,0                                    |
 | Motherboard                                                                                     | Orange Pi PC Plus 1G RAM               |
 | TCP networks link interface                                                                     | Ethernet, Wi-Fi                        |
 | Ethernet communication interface                                                                | 10BASE-T/100BASE-T (twisted pair)      |
@@ -145,10 +149,11 @@ TODO: Fill in the table with the correct parameters of the motherboard
 | Maximum number of outgoing connections via MODBUS TCP protocol                                  | 4                                      |
 | Maximum number of serial interfaces                                                             | 3 (through individual USB ports)       |
 | Supported serial interface protocols                                                            | MODBUS RTU, MODBUS ASCII               |
+| Supported serial MODBUS modes                                                                   | Master, Slave                          |
 | Maximum number of connected MODBUS devices                                                      | 255                                    |
-| Built-in servers                                                                                | MODBUS RTU/TCP, HTTP                   |
+| Built-in servers                                                                                | MODBUS TCP, HTTP                       |
 | Ready time at power up, s, no more than                                                         | 60                                     |
-| Current consumption, A, max                                                                     | 2                                      |
+| Current consumption, mA, max                                                                    | 2000                                   |
 | Weight, kg, no more than                                                                        | 0,200                                  |
 | Overall dimensions HxBxL, mm, no more than                                                      | 99 х 82 х 36                           |
 | The Product designation                                                                         | Switchgear and control equipment       |
@@ -168,43 +173,44 @@ TODO: Fill in the table with the correct parameters of the motherboard
 
 **Table 3** – USB-RS485 extension module technical specifications
 
-| Name                                        | Value                                                                                                 |
-| :------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| Communication speed                         | 300-921600bps                                                                                         |
-| Direction control                           | hardware automatically determines and controls data transmission direction                            |
-| Transmission distance (at low speed),       | about 1200 meters                                                                                     |
-| Transmission mode                           | up to 32 nodes in point pairs, repeaters are recommended for more than 16 nodes)                      |
-| Interface protection                        | Provide 600W lightning protection, surge and 15KV static protection (onboard 120R balance resistance) |
-| Temperature range                           | -15°C to +70°C                                                                                        |
-| Humidity range (at +25 °С)                  | 5% to 95%                                                                                             |
-| Cross-section of wires to be connected, mm2 | 0,3 – 1                                                                                               |
-| Tightening torque of terminal screws, N\*m  | 0,3                                                                                                   |
-| Degree of protection                        | ІР20                                                                                                  |
-
-<!-- TODO: | Galvanic insulation, kV | ??? | -->
+| Name                                        | Value                                                                            |
+| :------------------------------------------ | -------------------------------------------------------------------------------- |
+| Communication speed, bps                    | 300-921600                                                                       |
+| Direction control                           | hardware automatically determines and controls data transmission direction       |
+| Transmission distance (at low speed),       | about 1200 meters                                                                |
+| Transmission mode                           | up to 32 nodes in point pairs (repeaters are recommended for more than 16 nodes) |
+| Balance resistance                          | onboard 120Ohm, jumper-connectable                                               |
+| Current consumption, mA, max                | 50                                                                               |
+| Interface protection                        | Provide 600W lightning protection, surge and 15kV static protection              |
+| Galvanic insulation                         | None                                                                             |
+| Weight, kg, no more than                    | 0,010                                                                            |
+| Overall dimensions HxBxL, mm, no more than  | 15x18x63                                                                         |
+| Cross-section of wires to be connected, mm2 | 0,13 – 0,82                                                                      |
+| Tightening torque of terminal screws, N\*m  | 0,3                                                                              |
+| Degree of protection                        | ІР20                                                                             |
 
 **Table 4** – Power adapter technical specifications
 
 | Name                                       | Value                                                 |
 | :----------------------------------------- | ----------------------------------------------------- |
 | Input AC voltage range, V                  | 100-240                                               |
-| Input AC current, A                        | 0.5                                                   |
+| Input AC current, mA                       | 500                                                   |
 | Input AC frequency range, Hz               | 50/60                                                 |
-| Output voltage DC, V                       | 5                                                     |
-| Output current DC, A, max                  | 3                                                     |
+| Output voltage DC, V                       | 5,0                                                   |
+| Output current DC, mA, max                 | 3000                                                  |
 | AC inlet                                   | EU 2 pin plug                                         |
 | DC connector                               | USB Type-A                                            |
-| Weight, kg, no more than                   | ???                                                   |
-| Overall dimensions HxBxL, mm, no more than | 51x44x28                                              |
+| Weight, kg, no more than                   | 0,065                                                 |
+| Overall dimensions HxBxL, mm, no more than | 80x30x75                                              |
 | Degree of protection                       | IP20                                                  |
 | Electric shock protection class            | II                                                    |
-| Insulation voltage                         | Input/Output to out case, 500VDC, greater than 10Mohm |
-| Input to output withstand voltage          | AC 3kv / 10mA, 3s                                     |
+| Insulation voltage                         | Input/Output to out case, 500VDC, greater than 10MOhm |
+| Input to output withstand voltage          | AC 3kV / 10mA, 3s                                     |
 
-<!-- TODO:
-| Galvanic insulation, kV | ??? |
-| Insulation-rated voltage, V | ??? |
-| Rated pulse withstand voltage, kV | ??? |
+<!-- TODO: check
+| Galvanic insulation, kV | ??? | - is it the same as I/O withstand voltage ? test the value
+| Insulation-rated voltage, V | ??? | - is it the same as insulation voltage 500VDC ? test it
+| Rated pulse withstand voltage, kV | ??? | - is it the same as I/O withstand voltage ? test it
 -->
 
 ## Operation conditions
@@ -256,8 +262,6 @@ Before the start:
 - If you have any questions about the installation of the product, please contact technical support
   by the phone number at the end of the operating manual.
 
-<!-- TODO: picture -->
-
 ![](./images/OPCB-221B_For_Read_me_connection.svg)
 
 **Figure 2** – product connection diagram
@@ -297,7 +301,7 @@ or replacing the memory card will render the product inoperable.**
 
 ### Power up and the reboot sequence
 
-After the power-up, OPCB-221B loads the operating system and set up the communication interfaces.
+After the power-up, OPCB-221B loads the operating system and sets up the communication interfaces.
 This can take up to 1 minute.
 
 With the internet connection provided, OPCB-221B automatically connects to the cloud server, if
@@ -319,7 +323,7 @@ HTTP connections via Ethernet or Wi-Fi interfaces on TCP port 80.
 
 To access the HTTP web interface either:
 
-- Connect to the OPCB-221B WiFi access point with a PC or mobile device and open the following URL
+- Connect to the OPCB-221B Wi-Fi access point with a PC or mobile device and open the following URL
   in the browser: http://setup.overvis.com/;
 - Using any PC or mobile device in the local network, open the IP address of the OPCB-221B in the
   browser. OPCB-221B IP address can usually be found by accessing the local network router
@@ -336,7 +340,7 @@ and sent back to the requesting side.
 
 OPCB-221B can be also configured to receive MODBUS RTU or MODBUS ASCII requests via the serial
 interface and transmit them in MODBUS TCP format to specified IP addresses via Ethernet or Wi-Fi
-interfaces. In that case, the responses converted to request protocol are sent back to the serial
+interfaces. In that case, the responses (converted to request protocol) are sent back to the serial
 line.
 
 Connection from a PC or mobile device can be made with any software MODBUS TCP clients. The Windows
@@ -356,8 +360,8 @@ access. OPCB-221B communicates with the Overvis cloud using one or both of the f
 - WireGuard (VPN). Provides full encryption of traffic between the device and the Overvis cloud
   server.
 
-MODBUS TCP and WireGuard Overvis cloud connections are enabled by default and can be disabled in
-the settings. In that case, some of the Overvis cloud functions may be unavailable.
+MODBUS TCP Overvis cloud connection is enabled by default and can be disabled in the settings.
+WireGuard connection is used for maintenance - contact the support to order its reconfiguration.
 
 Connection, configuration, and usage of the product with the Overvis cloud server are described in
 detail in Appendix E.
@@ -400,7 +404,7 @@ compatibility require manual installation.
 
 The currently installed version is displayed in the OPCB-221B web interface. The changes list for
 each version is available here:
-https://github.com/overvis/opcb-release/tree/OPCB-221-opipc/CHANGELOG.md
+https://github.com/overvis/opcb-release/blob/opcb-221-opipc/CHANGELOG.md
 
 ## Manual firmware update and full factory reset
 
@@ -408,19 +412,11 @@ The manual update requires a full factory reset by uploading a new firmware imag
 card. All current firmware images can be found on the release page:
 https://github.com/overvis/opcb-release/tags
 
-<!-- TODO: correct release page url -->
+**ATTENTION! Please make sure the hardware name word of the downloaded image file matches your
+device (e.g. `"opipc"`). The installed version displayed in the device web interface has the same
+hardware name word.**
 
-The full factory reset procedure is described in Appendix F. In summary:
-
-1. Download the latest image from the release page.
-2. Remove the SD card from the product.
-3. Write the image to the existing or new SD card (deletes all data on the card, including
-   settings).
-4. Insert the freshly imaged SD card into the product.
-5. Connect OPCB-221B to the Internet using Ethernet cable and power on the porduct.
-6. Connect to the product's web interface through the Wi-Fi Access Point (using the product label).
-7. Open **"Manufacturing"** page and enter the device's private key from the label.
-8. Re-configure the device's settings that are required for operation in your conditions.
+The full factory reset procedure is described in Appendix G.
 
 ## Safety precautions
 
@@ -504,8 +500,8 @@ Date of manufacture:
 **The company is grateful to you for information about the quality of the product and suggestions
 on its operation.**
 
-If you have any questions, please contact the manufacturer: NOVATEK-ELECTRO LTD. Ukraine,
-65007,Odessa, Admirala Lazareva str. 59
+If you have any questions, please contact the manufacturer: NOVATEK-ELECTRO LTD. Ukraine, 65007,
+Odessa, Admirala Lazareva str. 59
 
 tel. +38(048)738-00-28
 
@@ -523,3 +519,19 @@ VN221012
 
 <!-- TODO: check and add all Appendixes -->
 <!-- TODO: All links should lead to docs.overvis.com -->
+
+---
+
+**Appendix A.** Initial Setup.
+
+**Appendix B.** Ethernet and Internet connection.
+
+**Appendix C.** Web Interface.
+
+**Appendix D.** MODBUS operation.
+
+**Appendix E.** Cloud Server Connection.
+
+**Appendix F.** HTTP API.
+
+**Appendix G.** Memory card flashing.
