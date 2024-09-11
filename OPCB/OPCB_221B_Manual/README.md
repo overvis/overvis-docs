@@ -16,70 +16,57 @@ OPCB-221B is used to remotely monitor and control the operation of:
 - Refrigeration controllers,
 - HVAC systems controllers,
 - Agricultural smart devices,
-- Power network relays, meters, other electrical equipment,
+- Power network relays, meters, and other electrical equipment,
 - Industrial IoT devices,
 - Industrial sensors and meters,
 - Other MODBUS-compatible electronics.
 
-OPCB-221B feature list:
+### OPCB-221B Features
 
 - MODBUS RTU/TCP converter.
 - Built-in Overvis cloud support (www.overvis.com).
-- Serving as TCP server or client, MODBUS RTU master or slave.
+- Serves as TCP server or client, MODBUS RTU master or slave.
 - RS-485 network extension.
 - MODBUS ASCII mode support.
-- Supporting LAN and/or Wi-Fi connection.
+- Supports LAN and/or Wi-Fi connection.
 - Optional 3G/LTE connection using an external USB modem.
 - Wi-Fi Access Point mode.
-- Web interface, accessible from the local network, via Wi-Fi Access Point or using Overvis cloud
+- Web interface, accessible from the local network, via Wi-Fi Access Point, or using Overvis cloud
   connection.
 - Remote configuration (using MODBUS or web interface).
 - RS-485 network settings: baud rate, parity, response timeout.
-- Multiple RS-485 networks support.
-- MODBUS requests debugging tools.
-- Automatic or manual firmware update.
+- Supports multiple RS-485 networks.
+- MODBUS request debugging tools.
+- Automatic or manual firmware updates.
 - HTTP API.
 
-## Terms and abbreviations
+## Terms and Abbreviations
 
-**Wi-Fi station** - a device connected to another device through Wi-Fi (access point);
+- **Wi-Fi station**: A device connected to another device through Wi-Fi (access point).
+- **Wi-Fi access point**: A device enabling connection to it through Wi-Fi.
+- **DHCP**: A protocol enabling the network units to automatically obtain TCP/IP parameters (IP
+  address).
+- **HTTP**: The transmission protocol for web pages and other data using client-server technology.
+- **IP (address)**: The address of the unit, which is unique within one network that is operated
+  according to IP protocol.
+- **IPv4**: A four-byte IP address.
+- **MAC (address)**: The address used in network transmissions for device identification. It is
+  typically globally unique.
+- **MAC-48**: A six-byte MAC address.
+- **MODBUS**: The standard packet communication protocol based on the client-server technology
+  intended for industrial electronic devices.
+- **MODBUS RTU**: The devices linking protocol, where the packet is transmitted byte by byte.
+- **MODBUS ASCII**: The devices linking protocol, where the packet is transmitted in ASCII
+  characters.
+- **MODBUS TCP**: MODBUS packet transmission protocol according to TCP/IP standard.
+- **WEB**: The server documents access system used on the Internet.
+- **Wi-Fi**: A family of standards for data transmission via radio channels.
 
-**Wi-Fi access point** - a device enabling connection to it through Wi-Fi;
-
-**DHCP** – a Protocol enabling the network units to automatically obtain TCP/IP parameters (IP
-address);
-
-**HTTP** - the Transmission Protocol for Web pages and other data using client-server technology;
-
-**IP (address)** – the address of the unit, which is unique within one network that is operated
-according to IP Protocol;
-
-**IPv4** - а four-byte IP address;
-
-**MAC (address)** – the address used in network transmissions for device identification. As a rule,
-it is globally unique;
-
-**MAC-48** - a six-byte MAC address;
-
-**MODBUS** - the standard Packet Communication Protocol based on the client-server technology
-intended for industrial electronic devices;
-
-**MODBUS RTU** - the Devices Linking Protocol, over which the packet is transmitted byte by byte;
-
-**MODBUS ASCII** - the Devices Linking Protocol, over which the packet is transmitted in the form
-of ASCII characters;
-
-**MODBUS TCP** - MODBUS Packet Transmission Protocol according to TCP/IP standard;
-
-**WEB** - the server documents access system used on the Internet;
-
-**Wi-Fi** - a family of standards for data transmission via radio channels.
-
-## Complete set
+## Complete Set
 
 ![](./images/Wiring_the_OPCB-221B_2_Product_set.svg)
 
-**Table 1** – Product set
+**Table 1** – Product Set
 
 | Name                                                                                             | Quantity (pcs.) |
 | ------------------------------------------------------------------------------------------------ | --------------- |
@@ -89,7 +76,7 @@ of ASCII characters;
 | 4. Ethernet cable                                                                                | 1               |
 | 5. Operation manual with Cloud Registration sticker                                              | 1               |
 
-## Overall mounting dimensions and controls
+## Overall Mounting Dimensions and Controls
 
 ![](./images/OPCB-221B_For_Read_me1.svg)
 
@@ -99,25 +86,25 @@ of ASCII characters;
 
 ![](./images/OPCB-221B_For_Read_me4.svg)
 
-**Figure 1** – OPCB-221B overall and mounting dimensions
+**Figure 1** – OPCB-221B Overall and Mounting Dimensions
 
-1. **"EXT1"** connectors - 2 USB Type-A connectors for connecting additional modules (e.g., RS-485
-   / RS-232 serial interface converters).
-2. **"ETH"** connector - 8P8C/RJ45 for wired connection to the local Ethernet network;
-3. **"EXT2"** connectors - USB Type-A connector for connecting additional modules (e.g., RS-485 /
+1. **"EXT1"** connectors: 2 USB Type-A connectors for connecting additional modules (e.g., RS-485 /
    RS-232 serial interface converters).
-4. **"PWR"** connector - DC Plug for connecting a 5V DC power source with a power of at least 9W.
-5. **"HDMI"** connector - HDMI output (not used).
-6. **"AUX"** connector - Audio output (not used).
-7. **"MEM"** slot - MicroSD card slot for pre-installed memory card access.
+2. **"ETH"** connector: 8P8C/RJ45 for wired connection to the local Ethernet network.
+3. **"EXT2"** connector: USB Type-A connector for connecting additional modules (e.g., RS-485 /
+   RS-232 serial interface converters).
+4. **"PWR"** connector: DC Plug for connecting a 5V DC power source with a power of at least 9W.
+5. **"HDMI"** connector: HDMI output (not used).
+6. **"AUX"** connector: Audio output (not used).
+7. **"MEM"** slot: MicroSD card slot for accessing the pre-installed memory card.
 
-## Technical specifications
+## Technical Specifications
 
-**Table 2** – OPCB-221B controller main technical specifications
+**Table 2** – OPCB-221B Controller Main Technical Specifications
 
 | Name                                                                                            | Value                                  |
 | :---------------------------------------------------------------------------------------------- | -------------------------------------- |
-| Power supply voltage DC, V                                                                      | 5,0                                    |
+| Power supply voltage DC, V                                                                      | 5.0                                    |
 | Motherboard                                                                                     | Orange Pi PC Plus 1G RAM               |
 | TCP networks link interface                                                                     | Ethernet, Wi-Fi                        |
 | Ethernet communication interface                                                                | 10BASE-T/100BASE-T (twisted pair)      |
@@ -133,269 +120,271 @@ of ASCII characters;
 | Built-in servers                                                                                | MODBUS TCP, HTTP                       |
 | Ready time at power up, s, no more than                                                         | 60                                     |
 | Current consumption, mA, max                                                                    | 2000                                   |
-| Weight, kg, no more than                                                                        | 0,200                                  |
+| Weight, kg, no more than                                                                        | 0.200                                  |
 | Overall dimensions HxBxL, mm, no more than                                                      | 99 х 82 х 36                           |
-| The Product designation                                                                         | Switchgear and control equipment       |
-| Rated operating condition                                                                       | continuous                             |
+| Product designation                                                                             | Switchgear and control equipment       |
+| Rated operating condition                                                                       | Continuous                             |
 | Degree of protection                                                                            | ІР30                                   |
 | Electric shock protection class                                                                 | III                                    |
 | Climatic design version                                                                         | NF 3.1                                 |
 | Permissible contamination level                                                                 | II                                     |
-| Galvanic insulation, kV<ul><li>power connector</li><li>Ethernet connector</li><li>USB</li></ul> | <br>–<br>1.5<br>–                      |
-| Installation (mounting)                                                                         | panel                                  |
+| Galvanic insulation, kV<ul><li>Power connector</li><li>Ethernet connector</li><li>USB</li></ul> | <br>–<br>1.5<br>–                      |
+| Installation (mounting)                                                                         | Panel                                  |
 
-- The product meets the requirements of the following: EN 60947-1; EN 60947-6-2; EN 55011; EN
-  61000-4-2.
+- The product meets the requirements of the following standards: EN 60947-1; EN 60947-6-2; EN
+  55011; EN 61000-4-2.
 - The product retains its functionality in any position in space.
-- Case material - aluminum.
+- Case material: Aluminum.
 - Harmful substances in amounts exceeding maximum permissible concentrations are absent.
 
-**Table 3** – USB-RS485 extension module technical specifications
+**Table 3** – USB-RS485 Extension Module Technical Specifications
 
 | Name                                        | Value                                                                            |
 | :------------------------------------------ | -------------------------------------------------------------------------------- |
 | Communication speed, bps                    | 300-921600                                                                       |
-| Direction control                           | hardware automatically determines and controls data transmission direction       |
-| Transmission distance (at low speed),       | about 1200 meters                                                                |
-| Transmission mode                           | up to 32 nodes in point pairs (repeaters are recommended for more than 16 nodes) |
-| Balance resistance                          | onboard 120Ohm, jumper-connectable                                               |
+| Direction control                           | Hardware automatically determines and controls data transmission direction       |
+| Transmission distance (at low speed),       | About 1200 meters                                                                |
+| Transmission mode                           | Up to 32 nodes in point pairs (repeaters are recommended for more than 16 nodes) |
+| Balance resistance                          | Onboard 120 Ohm, jumper-connectable                                              |
 | Current consumption, mA, max                | 50                                                                               |
-| Interface protection                        | Provide 600W lightning protection, surge and 15kV static protection              |
+| Interface protection                        | Provides 600W lightning protection, surge and 15kV static protection             |
 | Galvanic insulation                         | Present                                                                          |
-| Weight, kg, no more than                    | 0,010                                                                            |
+| Weight, kg, no more than                    | 0.010                                                                            |
 | Overall dimensions HxBxL, mm, no more than  | 15x18x63                                                                         |
-| Cross-section of wires to be connected, mm2 | 0,13 – 0,82                                                                      |
-| Tightening torque of terminal screws, N\*m  | 0,3                                                                              |
+| Cross-section of wires to be connected, mm2 | 0.13 – 0.82                                                                      |
+| Tightening torque of terminal screws, N\*m  | 0.3                                                                              |
 | Degree of protection                        | ІР20                                                                             |
 
-**Table 4** – Power adapter technical specifications
+**Table 4** – Power Adapter Technical Specifications
 
-| Name                                       | Value                                                 |
-| :----------------------------------------- | ----------------------------------------------------- |
-| Input AC voltage range, V                  | 100-240                                               |
-| Input AC current, mA                       | 500                                                   |
-| Input AC frequency range, Hz               | 50/60                                                 |
-| Output voltage DC, V                       | 5,0                                                   |
-| Output current DC, mA, max                 | 3000                                                  |
-| AC inlet                                   | EU 2 pin plug                                         |
-| DC connector                               | USB Type-A                                            |
-| Weight, kg, no more than                   | 0,065                                                 |
-| Overall dimensions HxBxL, mm, no more than | 80x30x75                                              |
-| Degree of protection                       | IP20                                                  |
-| Electric shock protection class            | II                                                    |
-| Insulation voltage                         | Input/Output to out case, 500VDC, greater than 10MOhm |
-| Input to output withstand voltage          | AC 3kV / 10mA, 3s                                     |
+| Name                                       | Value                                                   |
+| :----------------------------------------- | ------------------------------------------------------- |
+| Input AC voltage range, V                  | 100-240                                                 |
+| Input AC current, mA                       | 500                                                     |
+| Input AC frequency range, Hz               | 50/60                                                   |
+| Output voltage DC, V                       | 5.0                                                     |
+| Output current DC, mA, max                 | 3000                                                    |
+| AC inlet                                   | EU 2 pin plug                                           |
+| DC connector                               | USB Type-A                                              |
+| Weight, kg, no more than                   | 0.065                                                   |
+| Overall dimensions HxBxL, mm, no more than | 80x30x75                                                |
+| Degree of protection                       | IP20                                                    |
+| Electric shock protection class            | II                                                      |
+| Insulation voltage                         | Input/Output to outer case, 500VDC, greater than 10MOhm |
+| Input to output withstand voltage          | AC 3kV / 10mA, 3s                                       |
 
-## Operation conditions
+## Operation Conditions
 
 The product is intended for operation under the following conditions:
 
-- ambient temperature from -10 to +55 °C;
-- atmospheric pressure from 84 to 106.7 kPa;
-- relative humidity (at +25 °С) 30 to 80%.
+- Ambient temperature: -10 to +55 °C.
+- Atmospheric pressure: 84 to 106.7 kPa.
+- Relative humidity (at +25 °С): 30 to 80%.
 
 **Attention! The product is not intended to be used in the following conditions:**
 
-- significant vibrations and shock;
-- high humidity;
-- an aggressive environment containing acids, alkalis, etc., as well as strong contaminants
+- Significant vibrations and shock.
+- High humidity.
+- An aggressive environment containing acids, alkalis, etc., as well as strong contaminants
   (grease, oil, dust, etc.).
 
-## General instructions
+## General Instructions
 
 **ATTENTION! ALL CONNECTIONS MUST BE MADE WITH THE PRODUCT DE-ENERGIZED.**
 
-**Error when performing the installation works may damage the product and connected devices.**
+**Errors during installation may damage the product and connected devices.**
 
-When connecting to the RS-485 bus, use a twisted pair cable, cat. 1 or higher. The ends must be
-stripped of insulation by 4±0.5 mm and tightened with bushing tips. A shielded grounded cable is
-recommended.
+When connecting to the RS-485 bus, use a twisted pair cable, cat. 1 or higher. Strip the ends of
+insulation by 4±0.5 mm and tighten with bushing tips. A shielded grounded cable is recommended.
 
 **DO NOT LEAVE ANY BARE WIRE PROTRUDING BEYOND THE TERMINAL BLOCK.**
 
 **For reliable contact, tighten the terminal screws with the force indicated in the technical
 characteristics table.**
 
-When connecting to Ethernet, use the cable supplied, or twisted pair cable of cat. 5e with 8P8C
-(RJ45) plug.
+When connecting to Ethernet, use the supplied cable, or a twisted pair cable of cat. 5e with an
+8P8C (RJ45) plug.
 
-When fixing the wires, avoid mechanical damage, twisting or wearing down the insulation of wires.
+When fixing the wires, avoid mechanical damage, twisting, or wearing down the insulation of wires.
 
 ## Connection
 
-Before the start:
+Before starting:
 
-- Unpack and inspect the product for damage after transportation and, if found, contact the
-  supplier or the manufacturer;
-- Before connecting to the power supply keep the product under the operating conditions within two
-  hours (in case of possible condensation on the elements).
-- Carefully study the operating manual;
+- Unpack and inspect the product for damage after transportation. If any damage is found, contact
+  the supplier or the manufacturer.
+- Before connecting to the power supply, keep the product under operating conditions for two hours
+  (in case of possible condensation on the elements).
+- Carefully study the operating manual.
 - If you have any questions about the installation of the product, please contact technical support
-  by the phone number at the end of the operating manual.
+  using the phone number at the end of the operating manual.
 
 ![](./images/OPCB-221B_For_Read_me_connection.svg)
 
-**Figure 2** – product connection diagram
+**Figure 2** – Product Connection Diagram
 
 Connect OPCB-221B according to Figure 2, in the following order:
 
-- Using a twisted-pair cable of category 1 or higher, connect the terminal block of the RS-485
-  module to the serial interface bus (or directly to a device with this interface); _Note: contact
-  "A" for non-inverted signal (D+), contact "B" for inverted signal (D-)._
-- If the product should have access to the Internet or LAN: using the Ethernet connection cable
-  (included in the package) or twisted pair cable of cat. 5e with 8P8C (RJ45) plug, connect the
-  **"ETH"** connector (8P8C/RJ45) to the local network or computer.
-- Ensure the memory card is present in the **"MEM"** slot (installed by the manufacturer).
-- Connect the RS-485 module to one of the **"EXT1"** or **"EXT2** (USB Type-A) connectors.
-- Connect the power unit (included) to the **"PWR"** (DC Plug) connector.
-- Optionally: secure the USB connections with plastic cable ties to avoid accidental disconnection.
-- Connect the power unit to the power supply network 220-240VAC (50Hz).
+1. Using a twisted-pair cable of category 1 or higher, connect the terminal block of the RS-485
+   module to the serial interface bus (or directly to a device with this interface). **Note:**
+   Contact "A" is for the non-inverted signal (D+), and contact "B" is for the inverted signal
+   (D-).
+2. If the product should have access to the Internet or LAN, use the Ethernet connection cable
+   (included in the package) or a twisted pair cable of cat. 5e with an 8P8C (RJ45) plug to connect
+   the **"ETH"** connector (8P8C/RJ45) to the local network or computer.
+3. Ensure the memory card is present in the **"MEM"** slot (installed by the manufacturer).
+4. Connect the RS-485 module to one of the **"EXT1"** or **"EXT2"** (USB Type-A) connectors.
+5. Connect the power unit (included) to the **"PWR"** (DC Plug) connector.
+6. Optionally: Secure the USB connections with plastic cable ties to avoid accidental
+   disconnection.
+7. Connect the power unit to the power supply network (220-240VAC, 50Hz).
 
-## OPCB-221B operation
+## OPCB-221B Operation
 
-### General information
+### General Information
 
-OPCB-221B has a 32-bit processor running a POSIX-compliant OS (Armbian). It routes the traffic
-between the USB extension modules, such as serial RS-485 / RS-232 interfaces (MODBUS RTU/ASCII
-protocols) and Ethernet/Wi-Fi LAN interfaces (MODBUS TCP protocol), possibly routed further to the
-Internet.
+OPCB-221B has a 32-bit processor running a POSIX-compliant OS (Armbian). It routes traffic between
+the USB extension modules, such as serial RS-485 / RS-232 interfaces (MODBUS RTU/ASCII protocols),
+and Ethernet/Wi-Fi LAN interfaces (MODBUS TCP protocol), possibly routed further to the Internet.
 
-OPCB-221B has a built-in web interface, which can be used for configuration.
+OPCB-221B has a built-in web interface that can be used for configuration.
 
-OPCB-221B provides the ability to connect to a cloud server for remote monitoring and configuration
-of the product and connected devices.
+OPCB-221B can connect to a cloud server for remote monitoring and configuration of the product and
+connected devices.
 
-OPCB-221B provides the Wi-Fi Access Point (hotspot), to simplify the initial setup. Wi-Fi Access
-Point can be disabled in the settings.
+OPCB-221B provides a Wi-Fi Access Point (hotspot) to simplify the initial setup. Wi-Fi Access Point
+can be disabled in the settings.
 
 **OPCB-221B stores the operating system and data on the pre-installed microSD memory card. Removing
 or replacing the memory card will render the product inoperable.**
 
-### Power up and the reboot sequence
+### Power Up and Reboot Sequence
 
-After the power-up, OPCB-221B loads the operating system and sets up the communication interfaces.
-This usually takes up to 1 minute.
+After powering up, OPCB-221B loads the operating system and sets up the communication interfaces.
+This process usually takes up to 1 minute.
 
-With the internet connection provided, OPCB-221B automatically connects to the cloud server, if
+With an internet connection provided, OPCB-221B automatically connects to the cloud server if
 allowed in the settings. By default, unconfigured OPCB-221B creates a Wi-Fi access point with SSID
-"OPCB_XXXXXX" (where XXXXXX are the last 6 characters of the device's MAC) and password specified
+"OPCB_XXXXXX" (where XXXXXX are the last 6 characters of the device's MAC) and a password specified
 on the Registration sticker (attached to this manual).
 
-The soft reboot of the OPCB-221B can be performed through the web interface, by pressing the
-"Reboot device" button on the "Control" page. This will finish all currently ongoing operations,
-store the data and reboot the device within 1 minute.
+To perform a soft reboot of the OPCB-221B, use the web interface by pressing the "Reboot device"
+button on the "Control" page. This will finish all ongoing operations, store the data, and reboot
+the device within 1 minute.
 
-A hard reboot is performed by turning the power off by unplugging the device, waiting 5 seconds,
-and then turning the power on again.
+To perform a hard reboot, turn off the power by unplugging the device, wait 5 seconds, and then
+turn the power back on.
 
 ### Operation via HTTP
 
 OPCB-221B provides an HTTP web interface and HTTP REST API for web applications. OPCB-221B accepts
 HTTP connections via Ethernet or Wi-Fi interfaces on TCP port 80.
 
-To access the HTTP web interface either:
+To access the HTTP web interface:
 
-- Connect to the OPCB-221B Wi-Fi access point with a PC or mobile device and open the following URL
-  in the browser: http://192.168.4.1/;
-- Using any PC or mobile device in the local network, open the IP address of the OPCB-221B in the
-  browser. OPCB-221B IP address can usually be found by accessing the local network router
-  interface. Additionally, the IP address can be retrieved from OPCB by using the control file, see
-  Appendix F.
+1. Connect to the OPCB-221B Wi-Fi access point with a PC or mobile device and open the following
+   URL in the browser: `http://192.168.4.1/`.
+2. Alternatively, using any PC or mobile device in the local network, open the IP address of the
+   OPCB-221B in the browser. The OPCB-221B IP address can usually be found by accessing the local
+   network router interface. Additionally, the IP address can be retrieved from OPCB by using the
+   control file (see Appendix F).
 
 The default username for the web interface is "admin" with the password specified on the
 Registration sticker (attached to this manual).
 
 For general information about the web interface usage, see Appendix B.
 
-### OPCB-221B operation via MODBUS (TCP/RTU/ASCII)
+### OPCB-221B Operation via MODBUS (TCP/RTU/ASCII)
 
 OPCB-221B receives MODBUS TCP requests via Ethernet or Wi-Fi interfaces and transmits them in
 MODBUS RTU or MODBUS ASCII format over the serial interface. Responses are converted to MODBUS TCP
 and sent back to the requesting side.
 
-OPCB-221B can be also configured to receive MODBUS RTU or MODBUS ASCII requests via the serial
+OPCB-221B can also be configured to receive MODBUS RTU or MODBUS ASCII requests via the serial
 interface and transmit them in MODBUS TCP format to specified IP addresses via Ethernet or Wi-Fi
-interfaces. In that case, the responses (converted to request protocol) are sent back to the serial
-line. See Appendix A for main principles of OPCB operation.
+interfaces. In this case, the responses (converted to the request protocol) are sent back to the
+serial line. See Appendix A for the main principles of OPCB operation.
 
-Connection from a PC or mobile device can be made with any software MODBUS TCP clients.
+Connections from a PC or mobile device can be made using any software MODBUS TCP clients.
 
-MODBUS registers of the OPCB-221B are not described in this manual, because they are configurable
-in the web interface on the "Connections" page in the section "OPCB Modbus access".
+MODBUS registers of the OPCB-221B are not described in this manual because they are configurable in
+the web interface on the "Connections" page in the section "OPCB Modbus access."
 
 MODBUS routing between the connected devices is configured in the web interface on the
-"Connections" page in the section "Routing".
+"Connections" page in the section "Routing."
 
-### OPCB-221B operation using the Overvis cloud server
+### OPCB-221B Operation Using the Overvis Cloud Server
 
 OPCB-221B can establish connections to the Overvis cloud server using any interface with Internet
-access. OPCB-221B communicates with the Overvis cloud using Overvis VPN connection. It provides
-full encryption of traffic between the device and the Overvis cloud server.
+access. OPCB-221B communicates with the Overvis cloud using an Overvis VPN connection, which
+provides full encryption of traffic between the device and the Overvis cloud server.
 
 Overvis VPN cloud connection is enabled by default and can be disabled in the settings.
 
 The cloud operation can be configured and managed by creating an account on the Overvis cloud:
 https://www.overvis.com/
 
-OPCB-221B product set includes a Overvis Cloud registration sticker. Sticker information includes:
+The OPCB-221B product set includes an Overvis Cloud registration sticker. Sticker information
+includes:
 
-- **Model** of the device (OPCB-221B);
-- **MAC** address of the LAN interface;
-- **Private key** - the unique private key of the device for Overvis VPN access, also used as a
+- **Model** of the device (OPCB-221B).
+- **MAC** address of the LAN interface.
+- **Private key**: The unique private key of the device for Overvis VPN access, also used as a
   unique registration code for the Overvis cloud. This key is needed to restore the device license
-  in case of firmware reflashing;
-- **PIN** code - the unique PIN code for quick identification of the device on Overvis cloud;
+  in case of firmware reflashing.
+- **PIN** code: The unique PIN code for quick identification of the device on the Overvis cloud.
 - **Wi-Fi SSID** and **password** for the initial connection to the Wi-Fi Access Point.
-- Default **username** and **password** for web-interface access.
+- Default **username** and **password** for web interface access.
 - **Quick setup link** (with QR-code) for easy connection to the Overvis cloud.
 
-Access the link on the sticker and follow the instructions on the Overvis web site to set up the
-device cloud operation and access OPCB-221B interface through the Overvis cloud.
+Access the link on the sticker and follow the instructions on the Overvis website to set up the
+device cloud operation and access the OPCB-221B interface through the Overvis cloud.
 
-### Factory reset
+### Factory Reset
 
 A partial factory reset can be performed in one of the following ways:
 
-- using a control key USB flash drive. Write an empty file or an empty folder named `"RESET_CONF"`
-  to some USB flash drive, then connect it to one of the **"EXT1"** or **"EXT2** slots to reset the
-  settings to the factory defaults. The reset may take up to 30 seconds, the USB flash can be
-  disconnected afterwards.
-- through the web interface on the "Control" page.
+- **Using a control key USB flash drive**: Write an empty file or an empty folder named
+  `"RESET_CONF"` to a USB flash drive, then connect it to one of the **"EXT1"** or **"EXT2"** slots
+  to reset the settings to the factory defaults. The reset may take up to 30 seconds; the USB flash
+  drive can be disconnected afterward.
+- **Through the web interface** on the "Control" page.
 
-### Firmware update
+### Firmware Update
 
 Device firmware is updated continuously by the manufacturer. By default, the new version is
-installed automatically after the device is powered on or within 24h of operation. Automatic
+installed automatically after the device is powered on or within 24 hours of operation. Automatic
 updates guarantee the backward compatibility of all OPCB-221B functions. Releases without backward
 compatibility require manual installation.
 
-The currently installed version is displayed in the OPCB-221B web interface. The changes list for
-each version is available here: https://github.com/overvis/opcb-release/blob/opcb/CHANGELOG.md
+The currently installed version is displayed in the OPCB-221B web interface. The changelog for each
+version is available here: https://github.com/overvis/opcb-release/blob/opcb/CHANGELOG.md
 
-### Manual firmware update and full factory reset
+### Manual Firmware Update and Full Factory Reset
 
-The manual update requires a full factory reset by uploading a new firmware image to the SD memory
+A manual update requires a full factory reset by uploading a new firmware image to the SD memory
 card. All current firmware images can be found on the release page:
 https://github.com/overvis/opcb-release/releases
 
 The full factory reset procedure is described in Appendix D.
 
-## Initial setup
+## Initial Setup
 
 The device can be configured via the web interface. Configuration parameters are stored in a file
 on the SD memory card.
 
-**Note: some settings require soft-reboot, clients may lose the connection and have to reconnect.**
+**Note: Some settings require a soft reboot. Clients may lose the connection and have to
+reconnect.**
 
-1. After the device is plugged in and operational, access the web-interface by connecting to the
+1. After the device is plugged in and operational, access the web interface by connecting to the
    Wi-Fi Access Point or using the local network.
 
-   By default, unconfigured OPCB-221B creates a Wi-Fi access point with SSID "OPCB_XXXXXX" (where
-   XXXXXX are the last 6 characters of the device's MAC) and password specified on the Registration
-   sticker (attached to this manual).
+   By default, an unconfigured OPCB-221B creates a Wi-Fi access point with SSID "OPCB_XXXXXX"
+   (where XXXXXX are the last 6 characters of the device's MAC) and a password specified on the
+   Registration sticker (attached to this manual).
 
    Connect to the OPCB-221B Wi-Fi access point with a PC or mobile device and open the following
-   URL in the browser: http://192.168.4.1/;
+   URL in the browser: `http://192.168.4.1/`.
 
 2. Log in to the web interface using the default username "admin" and the password specified on the
    Registration sticker (attached to this manual).
@@ -403,35 +392,35 @@ on the SD memory card.
    ![Log in interface screenshot](./images/screenshot-login.png)
 
 3. After logging in, the quick setup page will be displayed. If the device was configured
-   previously and the reconfiguration is needed, quick setup page can be accessed from the
+   previously and reconfiguration is needed, the quick setup page can be accessed from the
    drop-down drawer in the header under the logo.
 
    ![Quick setup page screenshot](./images/screenshot-quick-setup.png)
 
-4. After the initial setup, the device will connect to the internet using specified settings and
-   will be available in Overvis cloud.
+4. After the initial setup, the device will connect to the internet using the specified settings
+   and will be available in the Overvis cloud.
 
-   Access the link on the sticker and follow the instructions on the Overvis web site to set up the
-   device cloud operation and access OPCB-221B interface through the Overvis cloud.
+   Access the link on the sticker and follow the instructions on the Overvis website to set up the
+   device cloud operation and access the OPCB-221B interface through the Overvis cloud.
 
-**ATTENTION! Please make sure that the Internet connection is correctly configured before disabling
-the Wi-Fi access point. Otherwise, an incorrect configuration may prevent any communication with
-the device, which can only be fixed with a factory reset.**
+**ATTENTION! Ensure the Internet connection is correctly configured before disabling the Wi-Fi
+access point. Otherwise, an incorrect configuration may prevent any communication with the device,
+which can only be fixed with a factory reset.**
 
-## Safety precautions
+## Safety Precautions
 
-To ensure the product's safe operation it is strictly forbidden the following:
+To ensure the product's safe operation, it is strictly forbidden to:
 
-- to carry out installation works and maintenance without disconnecting the product from the mains;
-- to open and repair the product without any professional help;
-- to operate the product with the mechanical damages of the housing.
+- Carry out installation works and maintenance without disconnecting the product from the mains.
+- Open and repair the product without professional help.
+- Operate the product with mechanical damages to the housing.
 
-It is not allowed water penetration on terminals and internal elements of the product.
+Water penetration on terminals and internal elements of the product is not allowed.
 
-During operation and maintenance the regulatory document requirements must be met, namely:
+During operation and maintenance, the regulatory document requirements must be met, namely:
 
-- Regulations for Operation of Consumer
-- Electrical Installations; Safety Rules for Operation of Consumer Electrical Installations;
+- Regulations for Operation of Consumer Electrical Installations.
+- Safety Rules for Operation of Consumer Electrical Installations.
 - Occupational Safety in Operation of Electrical Installations.
 
 **LIQUID INGRESS ON TERMINALS AND INTERNAL ELEMENTS OF THE DEVICE IS UNACCEPTABLE.**
@@ -447,15 +436,15 @@ Recommended frequency of maintenance is every six months.
 
 Procedure:
 
-1. Check the connection reliability of the wires, if necessary, clamp;
-2. Check the reliability of the USB connections, if necessary, fix them with plastic clamps;
-3. Visually check the integrity of the housing, in case of damages the product should be taken out
-   of service and sent for repair;
-4. If necessary, clean the housing of the product with a dry cloth.
+1. Check the reliability of wire connections; tighten if necessary.
+2. Check the reliability of USB connections; fix them with plastic clamps if needed.
+3. Visually inspect the integrity of the housing. In case of damage, take the product out of
+   service and send it for repair.
+4. If needed, clean the housing of the product with a dry cloth.
 
 **Do not use abrasives or solvents for cleaning.**
 
-## Service life and manufacturer warranty
+## Service Life and Manufacturer Warranty
 
 The service lifetime of the product is 10 years. At the end of its service life, please contact the
 manufacturer.
@@ -464,7 +453,7 @@ Shelf life is 3 years.
 
 The warranty period of the product is 3 years from the date of sale.
 
-During the warranty period (in case of failure) the manufacturer repairs the product free of
+During the warranty period (in case of failure), the manufacturer repairs the product free of
 charge.
 
 **ATTENTION! IF THE PRODUCT HAS NOT BEEN USED IN ACCORDANCE WITH THE REQUIREMENTS OF THIS OPERATION
@@ -480,25 +469,25 @@ prevents mechanical damage.
 **If returning the product or submitting it for warranty (post-warranty) service, please state in
 detail the reason for return in the complaint information field.**
 
-## Transportation and storage
+## Transportation and Storage
 
-The product in the original packaging is permitted to be transported and stored at temperatures
-ranging from minus 45 to +60 °C and with a relative humidity of no more than 80%. During
-transportation, the product should be protected from mechanical damage.
+The product in its original packaging is permitted to be transported and stored at temperatures
+ranging from -45 to +60 °C and with relative humidity of no more than 80%. During transportation,
+the product should be protected from mechanical damage.
 
-## Acceptance certificate
+## Acceptance Certificate
 
 The product is manufactured and accepted in accordance with the requirements of the current
 technical documentation and classified as fit for operation.
 
 Head of QCD:
 
-Date of manufacture:
+Date of Manufacture:
 
-## Complaint information
+## Complaint Information
 
-**The company is grateful to you for information about the quality of the product and suggestions
-on its operation.**
+**The company is grateful for your feedback about the quality of the product and suggestions for
+its operation.**
 
 If you have any questions, please contact the manufacturer: NOVATEK-ELECTRO LTD. Ukraine, 65007,
 Odessa, Admirala Lazareva str. 59
@@ -513,7 +502,7 @@ Warranty Service Department: +38(067) 557-12-49
 
 Technical Support Department: +38(067) 565-37-68
 
-Date of sale
+Date of Sale
 
 VN221012
 
