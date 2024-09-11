@@ -1,7 +1,7 @@
 - [OPCB](/ua/OPCB/)
   - Документація для користувачів
     - [Швидкий старт та додатки](/ua/OPCB/User_Docs/Quick_Start/)
-    - [Керівництво з експлуатації OPCB-221B](/ua/OPCB/User_Docs/OPCB-221B_Manual/)
+    - [Керівництво з експлуатації OPCB-221B](/ua/OPCB/OPCB-221B_Manual/)
     - Посібники
       - [Початкове налаштування](/ua/OPCB/User_Docs/Guides/Initial_Setup.md)
       - [Веб-інтерфейс](/ua/OPCB/User_Docs/Guides/Web_Interface.md)

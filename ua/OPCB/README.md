@@ -2,7 +2,7 @@
 
 Overvis OPCB - це серія пристроїв контролерів зв'язку:
 
-- [OPCB-221B](./User_Docs/OPCB-221B_Manual/README.md)
+- [OPCB-221B](./OPCB-221B_Manual/)
 
 <!-- TODO: acquire links -->
 

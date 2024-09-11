@@ -1,18 +1,19 @@
 - [OPCB](/OPCB/)
-  - User Documentation
-    - [Quick Start & Applications](/OPCB/User_Docs/Quick_Start/)
-    - [OPCB-221 Operating Manual](/OPCB/User_Docs/OPCB-221_Manual/)
-    - [OPCB-221B Operating Manual](/OPCB/User_Docs/OPCB-221B_Manual/)
-    - Guides
-      - [Initial Setup](/OPCB/User_Docs/Guides/Initial_Setup.md)
-      - [Web Interface](/OPCB/User_Docs/Guides/Web_Interface.md)
-      - [Ethernet/Internet Connection](/OPCB/User_Docs/Guides/Ethernet_Internet_Connection.md)
-      - [Cloud Server Connection](/OPCB/User_Docs/Guides/Cloud_Server_Connection.md)
-      - [Memory Card Flashing](/OPCB/User_Docs/Guides/Memory_Card_Flashing.md)
-  - [Releases & News](/OPCB/Releases/)
-  - Programming Documentation
-    - [Modbus Operation Reference](/OPCB/Programming_Docs/Modbus.md)
-    - [HTTP API Reference](/OPCB/Programming_Docs/API.md)
-  - Developer Documentation
-    - [OPCB Runtime Installation](/OPCB/Developer_Docs/Runtime_Installation.md)
-    - [Overvis Cloud Registration](/OPCB/Developer_Docs/Overvis_Cloud_Registration.md)
+  - [OPCB-221B Operating Manual](/OPCB/OPCB_221B_Manual/)
+  - User Docs
+    - [Principles & Applications](/OPCB/User/Principles/)
+    - [Web Interface Overview](/OPCB/User/Web_Interface/)
+    - [Troubleshooting](/OPCB/User/Troubleshooting/)
+    - [Reflashing / Manufacturing](/OPCB/User/Manufacturing/)
+    - [Architecture Overview & SSH Access](/OPCB/User/Architecture/)
+  - Guides
+    - [How to connect Modbus RTU device to Overvis Cloud using OPCB](/OPCB/Guide/Connect/)
+    - [How to set up an automation task using OPCB](/OPCB/Guide/Automation/)
+    - [How to create a custom local and cloud dashboard using OPCB and Overvis](/OPCB/Guide/Dashboard/)
+  - References
+    - [HTTP API Reference](/OPCB/Reference/API/)
+    - [Config File Reference](/OPCB/Reference/Config/)
+    - [User Database Schema Reference](/OPCB/Reference/DB/)
+    - [In-Memory Database Schema Reference](/OPCB/Reference/Memory_DB/)
+    - [Redis Database Reference](/OPCB/Reference/Redis/)
+    - [Control Files Reference](/OPCB/Reference/Control_Files/)
