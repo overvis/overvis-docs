@@ -55,6 +55,11 @@
         autoHeader: true,
         // mergeNavbar: true,
         // coverpage: true,
+        renderer: {
+          link: function (...args) {
+            console.log(args);
+          },
+        },
         plugins: [
           function (hook) {
             var footer = [

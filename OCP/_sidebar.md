@@ -11,6 +11,7 @@
   - Guides
     - [Creating Visualizations](/OCP/Guides/Visualizations/)
     - [Resource Consumption Report](/OCP/Guides/Resource_Consumption_Report/)
+    - [Enumeration Parameter Value Type](/OCP/Guides/Enumeration_Parameter_Value_Type/)
   - [News](/OCP/News/)
   - References
     - [API Reference](/OCP/References/API/)
