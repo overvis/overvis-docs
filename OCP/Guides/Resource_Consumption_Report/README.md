@@ -67,21 +67,21 @@ The detailed form shows data from all child branches:
 
 ![Detailed report XLSX](./example-report-detailed-xlsx.png)
 
-[Download example XLSX](./example-report-detailed.xlsx)
+[Download example XLSX](/_media/resource-consumption-report-guide/example-report-detailed.xlsx ":ignore")
 
 ![Detailed Report PDF](./example-report-detailed-pdf.png)
 
-[Download example PDF](./example-report-detailed.pdf)
+[Download example PDF](/_media/resource-consumption-report-guide/example-report-detailed.pdf ":ignore")
 
 The short form only shows data from the main (first-level) branches:
 
 ![Short report XLSX](./example-report-short-xlsx.png)
 
-[Download example XLSX](./example-report-short.xlsx)
+[Download example XLSX](/_media/resource-consumption-report-guide/example-report-short.xlsx ":ignore")
 
 ![Short report PDF](./example-report-short-pdf.png)
 
-[Download example PDF](./example-report-short.pdf)
+[Download example PDF](/_media/resource-consumption-report-guide/example-report-short.pdf ":ignore")
 
 ## Report constructor
 
