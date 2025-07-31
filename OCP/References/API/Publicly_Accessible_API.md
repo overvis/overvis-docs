@@ -29,7 +29,7 @@ curl -s -S -H "Content-Type: application/json" \
 ```json
 {
     "apiVersion": "0.1.0",
-    "apiServerVersion": "1.0.0"
+    "apiServerVersion": "2403.1"
 }
 ```
 

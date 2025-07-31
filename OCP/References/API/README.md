@@ -4,11 +4,16 @@
 
 Overvis provides REST-like HTTP API with request payload and response encoded in JSON format.
 
-Base API URL is `https://ocp.overvis.com/api/v1/`. Further documentation will list the requests as entrypoints with paths that should be concatenated to the base API URL. E.g. API version retrieval endpoint is `/version/`, that means, the full URL of the version request should be `https://ocp.overvis.com/api/v1/version/`.
+Base API URL is `https://ocp.overvis.com/api/v1/`. Further documentation will list the requests as
+entrypoints with paths that should be concatenated to the base API URL. E.g. API version retrieval
+endpoint is `/version/`, that means, the full URL of the version request should be
+`https://ocp.overvis.com/api/v1/version/`.
 
 All API requests require `Content-Type: application/json` HTTP header set.
 
-All POST requests require HTTP payload to be a UTF-8 encoded plain-text with semantically-correct JSON content. Empty payload is not allowed for `POST` requests, send `null` if endpoint requires no data.
+All POST requests require HTTP payload to be a UTF-8 encoded plain-text with semantically-correct
+JSON content. Empty payload is not allowed for `POST` requests, send `null` if endpoint requires no
+data.
 
 ## Authentication
 
@@ -28,14 +33,16 @@ Session token expires after 1 hour and is not automatically prolonged when being
 
 All requests return HTTP status code `200` if executed correctly.
 
-`5xx` status codes represent server-side unexpected errors and are automatically reported to the developers.
+`5xx` status codes represent server-side unexpected errors and are automatically reported to the
+developers.
 
-`4xx` status codes represent errors that are client's concern and should be dealt with on the client side. These errors have JSON payload which look like this:
+`4xx` status codes represent errors that are client's concern and should be dealt with on the
+client side. These errors have JSON payload which look like this:
 
 ```json
 {
-    "errorCode": "ErrCode",
-    "errorMessage": "Human-readable error message in english."
+  "errorCode": "ErrCode",
+  "errorMessage": "Human-readable error message in english."
 }
 ```
 
@@ -59,9 +66,11 @@ These errors can be returned by any endpoint:
 
 ## Dates
 
-All dates in all API requests and responses use [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format with or without microseconds.
+All dates in all API requests and responses use [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+format with or without microseconds.
 
-All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845Z`. Requests can provide dates in any timezone.
+All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845Z`. Requests can
+provide dates in any timezone.
 
 ## Endpoints
 - [Publicly Accessible API](./Publicly_Accessible_API.md)
@@ -74,6 +83,7 @@ All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845
 - [Organization API](./Organization_API.md)
   - [`GET  /org/:orgId/nets/device-param-tree/` - Get Organization Networks-Devices-Parameters Tree](./Organization_API.md#OrgGetDeviceParamTree)
   - [`POST /org/:orgId/dashboard/add-widgets/` - Add Widgets to Dashboard](./Organization_API.md#DashboardAddWidgets)
+  - [`GET  /org/1/dashboard/` - Get data for the Dashboard](./Organization_API.md#DashboardGetData)
 - [Networks API](./Networks_API.md)
   - [`GET  /org/:orgId/nets/` - Get Organization Networks List](./Networks_API.md#OrgGetNets)
   - [`GET  /net/:netId/` - Get Network Info](./Networks_API.md#NetGetInfo)
@@ -88,6 +98,8 @@ All dates returned in responses are in UTC. Example: `2018-05-14T16:28:59.948845
   - [`GET  /alert/:alertId/status/` - Get Alert Status Information](./Alert_API.md#GetAlertStatus)
 - [Device Parameter API](./Device_Parameter_API.md)
   - [`POST /org/:orgId/params/get-id-by-reference/` - Get parameter identifier by reference](./Device_Parameter_API.md#GetParamIdByReference)
+  - [`GET  /params/last-readings/` - Returns last read values of the parameters](./Device_Parameter_API.md#GetParamsLastReadings)
+  - [`POST /params/readings-on-time/` - Returns last read values of the parameters up to specified dates](./Device_Parameter_API.md#GetParamsReadingsOnTime)
   - [`GET  /params/read-realtime/` - Read current value of the parameter from the device](./Device_Parameter_API.md#RealtimeReadParams)
   - [`POST /param/:paramId/write/` - Write parameter value to the device](./Device_Parameter_API.md#WriteParam)
 - [Raw Readings API](./Raw_Readings_API.md)

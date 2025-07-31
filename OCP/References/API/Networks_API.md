@@ -37,7 +37,7 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 | `port` | `Number` | Network TCP/IP port (used to establish connection to direct-connection networks). |
 | `mac` | `String` | **optional** MAC adrress of the network. Used only for backward-connection networks. |
 | `protocol` | `String` | Server communication protocol. Currently always "modbustcp". |
-| `controllerKind` | `String` | Controller used for this network. E.g., "et485", "em486", "em481", "em480", "em482", "rpm416", "other", etc. |
+| `sku` | `String` | SKU used for this network. E.g., "et485", "em486", "em481", "em480", "em482", "rpm416" etc. |
 | `controllerModbusUnitid` | `Number` | Modbus address of the controller in the RS-485 network. |
 | `devicePasswords` | `String[]` | Passwords that Overvis sends to this controller after the connection is established. Used only for devices that support password protection. |
 
@@ -54,7 +54,7 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
     "port": 502,
     "mac": "11:22:33:44:55:66",
     "protocol": "modbustcp",
-    "controllerKind": "em481",
+    "sku": "em481",
     "controllerModbusUnitId": 111,
     "devicePasswords": ["mypass"]
 }
@@ -90,6 +90,8 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 | `name` | `String` | User-provided name of the network. |
 | `slug` | `String` | URL-conformant unique code of the network. |
 | `lid` | `String` | Connection identifier (Logical ID) of the network. Is one of the following:<br> - `{ "backward": "xx-xx-xx-xx-xx-xx" }` where `xx-xx-xx-xx-xx-xx` is backward connection MAC address.<br> - `{ "direct": "<ip>:<port>" }` where `<ip>:<port>` is IP-address and port for the direct connection. |
+| `disabledOn` | `String` | Date and time when the network was disabled. If not present, the network is enabled. |
+| `disabledBy` | `String` | Reason why the network was disabled. If not present, the network is enabled. |
 
 ### Success response example
 
@@ -105,7 +107,9 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
         "id": 18,
         "name": "Some other network",
         "slug": "some-other-network",
-        "lid": { "direct": "1.2.3.4:502" }
+        "lid": { "direct": "1.2.3.4:502" },
+        "disabledOn": "2021-09-01T12:00:00.000Z",
+        "disabledBy": "user"
     }
 ]
 ```

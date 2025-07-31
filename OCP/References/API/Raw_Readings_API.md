@@ -12,7 +12,7 @@ POST /raw/read-multiple-register-group/
 ### Parameters - `Body`
 | Name     | Type       | Description                           |
 |:---------|:-----------|:--------------------------------------|
-| `emptyName` | `Array` | Request body should contain an array of objects with proeprties provided below. |
+| `emptyName` | `Array` | Request body should contain an array of objects with properties provided below. |
 | `deviceModbusId` | `number` | Identifier of device inside modbus network. |
 | `address` | `number` | Starting address. |
 | `kind` | `String` | Kind of register group:<br> - `holding` - 16-bit word. Read-Write.<br> - `coil` - Single bit. Read-Write.<br> - `discrete-input` - Single bit. Read-Only.<br> - `input` - 16-bit word. Read-Only. |
@@ -27,7 +27,7 @@ TOKEN=`curl -s -H "Content-Type: application/json" \
     "https://ocp.overvis.com/api/v1/authenticate/" | \
         jq -r ".token"` && \
 curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" \
-    -d '[{"deviceModbusId": 1, "address": 3, "registersNum": 5, "kind": "holding", "connection": {"kind": "backward", "mac": "11:22:33:44:55:66"}}, {"deviceModbusId": 111, "address": 459, "registersNum": 1, "kind": "holding", "connection": {"kind": "backward", "mac": "11:22:33:44:55:66"}}]' \
+    -d '[{"deviceModbusId": 1, "address": 3, "registersNum": 5, "kind": "holding", "connection": {"kind": "direct", "ip": "127.0.0.1", "port": 55502}}, {"deviceModbusId": 111, "address": 459, "registersNum": 1, "kind": "holding", "connection": {"kind": "direct", "ip": "127.0.0.1", "port": 55502}}]' \
     "https://ocp.overvis.com/api/v1/raw/read-multiple-register-group/" | \
         jq -C
 ```
@@ -37,14 +37,20 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 ```json
 [
     {
+        "netLid": "127.0.0.1:55502",
+        "connection": { "kind": "direct", "ip": "127.0.0.1", "port": 55502 },
         "deviceModbusId": 1,
         "address": 3,
+        "kind": "holding",
         "registersNum": 5,
         "result": {"ok":[65535,65535,65535,65535,65535]}
     },
     {
+        "netLid": "127.0.0.1:55502",
+        "connection": { "kind": "direct", "ip": "127.0.0.1", "port": 55502 },
         "deviceModbusId": 111,
         "address": 459,
+        "kind": "holding",
         "registersNum": 1,
         "result": {"ok":[9600]}
     }
@@ -56,16 +62,22 @@ curl -s -S -H "Content-Type: application/json" -H "Authorization: token $TOKEN" 
 ```json
 [
     {
+        "netLid": "127.0.0.1:55502",
+        "connection": { "kind": "direct", "ip": "127.0.0.1", "port": 55502 },
         "deviceModbusId": 22,
         "address": 3,
+        "kind": "holding",
         "registersNum": 5,
-        "result": {"err":"MODBUS exception during reading register 3h: GatewayTargetDeviceFailedToRespond"}
+        "result": {"err":"MODBUS exception during reading register 3h: GatewayPathUnavailable"}
     },
     {
+        "netLid": "127.0.0.1:55502",
+        "connection": { "kind": "direct", "ip": "127.0.0.1", "port": 55502 },
         "deviceModbusId": 45,
         "address": 459,
+        "kind": "holding",
         "registersNum": 1,
-        "result": {"err":"MODBUS exception during reading register 459h: GatewayTargetDeviceFailedToRespond"}
+        "result": {"err":"MODBUS exception during reading register 459h: GatewayPathUnavailable"}
     }
 ]
 ```
